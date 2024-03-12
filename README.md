@@ -27,5 +27,7 @@ Prettier, ESLint, Vue 3 Snippets
 설계한 UI 화면 Vue 코드 카피
 
 # IntelliJ - GitHub 연동
-
 https://brunch.co.kr/@mystoryg/168
+
+# IntelliJ - Pull Request
+https://ddoriya.tistory.com/entry/IntelliJ-Git-pull-request-%ED%95%98%EA%B8%B0

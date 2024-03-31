@@ -77,6 +77,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .div-2 {
   border-bottom: 1px solid #eee;
   background-color: rgba(249, 249, 249, 0);
@@ -91,12 +92,14 @@
   line-height: 187.5%;
   padding: 18px 60px;
 }
+
 @media (max-width: 991px) {
   .div-2 {
     max-width: 100%;
     padding: 0 20px;
   }
 }
+
 .div-3 {
   display: flex;
   width: 1194px;
@@ -105,11 +108,13 @@
   justify-content: space-between;
   gap: 20px;
 }
+
 @media (max-width: 991px) {
   .div-3 {
     flex-wrap: wrap;
   }
 }
+
 .div-4 {
   display: flex;
   margin-top: 44px;
@@ -117,22 +122,26 @@
   gap: 20px;
   white-space: nowrap;
 }
+
 @media (max-width: 991px) {
   .div-4 {
     margin-top: 40px;
     white-space: initial;
   }
 }
+
 .div-5 {
   font-family:
     Noto Sans,
     sans-serif;
 }
+
 .div-6 {
   font-family:
     Noto Sans,
     sans-serif;
 }
+
 .img {
   aspect-ratio: 0.95;
   object-fit: auto;
@@ -140,33 +149,39 @@
   width: 62px;
   align-self: stretch;
 }
+
 .div-7 {
   display: flex;
   margin-top: 44px;
   justify-content: space-between;
   gap: 20px;
 }
+
 @media (max-width: 991px) {
   .div-7 {
     margin-top: 40px;
   }
 }
+
 .div-8 {
   font-family:
     Noto Sans,
     sans-serif;
 }
+
 .div-9 {
   color: #999;
   font-family:
     Noto Sans,
     sans-serif;
 }
+
 .div-10 {
   font-family:
     Noto Sans,
     sans-serif;
 }
+
 .div-11 {
   background-color: rgba(255, 103, 0, 0.05);
   display: flex;
@@ -177,6 +192,7 @@
   white-space: nowrap;
   padding: 50px 60px;
 }
+
 @media (max-width: 991px) {
   .div-11 {
     max-width: 100%;
@@ -184,6 +200,7 @@
     padding: 0 20px;
   }
 }
+
 .div-12 {
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -194,6 +211,7 @@
   margin: 95px 0 166px;
   padding: 50px 65px;
 }
+
 @media (max-width: 991px) {
   .div-12 {
     white-space: initial;
@@ -201,6 +219,7 @@
     padding: 0 20px;
   }
 }
+
 .div-13 {
   color: #ff6b00;
   text-align: center;
@@ -210,6 +229,7 @@
     40px Noto Sans,
     sans-serif;
 }
+
 .div-14 {
   border-radius: 5px;
   border: 1px solid #b9b9b9;
@@ -223,6 +243,7 @@
     400 20px/275% Noto Sans,
     sans-serif;
 }
+
 @media (max-width: 991px) {
   .div-14 {
     max-width: 100%;
@@ -231,6 +252,7 @@
     white-space: initial;
   }
 }
+
 .div-15 {
   border-radius: 5px;
   border: 1px solid #b9b9b9;
@@ -244,6 +266,7 @@
     400 20px/275% Noto Sans,
     sans-serif;
 }
+
 @media (max-width: 991px) {
   .div-15 {
     max-width: 100%;
@@ -251,6 +274,7 @@
     white-space: initial;
   }
 }
+
 .div-16 {
   align-self: end;
   display: flex;
@@ -260,11 +284,13 @@
   color: #999;
   line-height: 100%;
 }
+
 @media (max-width: 991px) {
   .div-16 {
     white-space: initial;
   }
 }
+
 .div-17 {
   text-align: right;
   font-family:
@@ -272,28 +298,33 @@
     sans-serif;
   flex-grow: 1;
 }
+
 @media (max-width: 991px) {
   .div-17 {
     white-space: initial;
   }
 }
+
 .div-18 {
   text-align: center;
   font-family:
     Noto Sans,
     sans-serif;
 }
+
 .div-19 {
   font-family:
     Noto Sans,
     sans-serif;
   flex-grow: 1;
 }
+
 @media (max-width: 991px) {
   .div-19 {
     white-space: initial;
   }
 }
+
 .div-20 {
   border-radius: 5px;
   background-color: #ff6b00;
@@ -307,6 +338,7 @@
     30px/133% Noto Sans,
     sans-serif;
 }
+
 @media (max-width: 991px) {
   .div-20 {
     max-width: 100%;
@@ -314,6 +346,7 @@
     padding: 0 20px;
   }
 }
+
 .div-21 {
   color: #999;
   text-align: center;
@@ -323,6 +356,7 @@
     400 25px/100% Noto Sans,
     sans-serif;
 }
+
 .div-22 {
   border-top: 1px solid #ccc;
   background-color: #fff;
@@ -332,30 +366,35 @@
   align-items: center;
   padding: 39px 60px;
 }
+
 @media (max-width: 991px) {
   .div-22 {
     max-width: 100%;
     padding: 0 20px;
   }
 }
+
 .div-23 {
   display: flex;
   width: 1017px;
   max-width: 100%;
   flex-direction: column;
 }
+
 .div-24 {
   display: flex;
   align-items: start;
   justify-content: space-between;
   gap: 20px;
 }
+
 @media (max-width: 991px) {
   .div-24 {
     max-width: 100%;
     flex-wrap: wrap;
   }
 }
+
 .div-25 {
   display: flex;
   flex-grow: 1;
@@ -364,18 +403,21 @@
   font-weight: 700;
   white-space: nowrap;
 }
+
 @media (max-width: 991px) {
   .div-25 {
     max-width: 100%;
     white-space: initial;
   }
 }
+
 .div-26 {
   display: flex;
   width: 100%;
   justify-content: space-between;
   gap: 20px;
 }
+
 @media (max-width: 991px) {
   .div-26 {
     max-width: 100%;
@@ -383,6 +425,7 @@
     white-space: initial;
   }
 }
+
 .div-27 {
   display: flex;
   justify-content: space-between;
@@ -392,17 +435,20 @@
   text-align: center;
   line-height: 100%;
 }
+
 @media (max-width: 991px) {
   .div-27 {
     white-space: initial;
   }
 }
+
 .img-2 {
   aspect-ratio: 0.96;
   object-fit: auto;
   object-position: center;
   width: 48px;
 }
+
 .div-28 {
   font-family:
     Noto Sans,
@@ -410,6 +456,7 @@
   flex-grow: 1;
   margin: auto 0;
 }
+
 .div-29 {
   color: #777;
   margin: auto 0;
@@ -417,6 +464,7 @@
     18px/111% Noto Sans,
     sans-serif;
 }
+
 .div-30 {
   color: #777;
   align-self: end;
@@ -425,11 +473,13 @@
     18px/111% Noto Sans,
     sans-serif;
 }
+
 @media (max-width: 991px) {
   .div-30 {
     white-space: initial;
   }
 }
+
 .div-31 {
   display: flex;
   margin-top: 13px;
@@ -440,33 +490,39 @@
   color: #888;
   font-weight: 400;
 }
+
 @media (max-width: 991px) {
   .div-31 {
     max-width: 100%;
   }
 }
+
 .div-32 {
   font-family:
     Noto Sans,
     sans-serif;
   line-height: 20px;
 }
+
 @media (max-width: 991px) {
   .div-32 {
     max-width: 100%;
   }
 }
+
 .div-33 {
   font-family:
     Noto Sans,
     sans-serif;
   margin-top: 18px;
 }
+
 @media (max-width: 991px) {
   .div-33 {
     max-width: 100%;
   }
 }
+
 .div-34 {
   color: #8d8c8c;
   align-self: center;
@@ -476,6 +532,7 @@
     400 14px/143% Noto Sans,
     sans-serif;
 }
+
 @media (max-width: 991px) {
   .div-34 {
     white-space: initial;

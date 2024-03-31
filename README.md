@@ -46,3 +46,8 @@ https://element-plus.org/en-US/guide/quickstart.html
 # IntelliJ - 파일 저장 시 코드 정렬
 
 설정 - 도구 - 저장 시 액션 - 코드 서식 다시 지정, Prettier 실행
+
+# GitHub 연동
+
+git config --global user.name name
+git config --global user.email (깃허브 이메일)

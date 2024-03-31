@@ -34,13 +34,13 @@ const router = createRouter({
           component: () => import('../views/DetailChallenge.vue')
         },
         {
-          path: '/mypage1',
-          name: 'mypage1',
+          path: '/myPage1',
+          name: 'myPage1',
           component: () => import('../views/MyPage1.vue')
         },
         {
-          path: '/mypage2',
-          name: 'mypage2',
+          path: '/myPage2',
+          name: 'myPage2',
           component: () => import('../views/MyPage2.vue')
         }
       ]

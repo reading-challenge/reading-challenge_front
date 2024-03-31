@@ -23,15 +23,16 @@ onMounted(() => {
 
         <img
           loading="lazy"
-          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
           class="img-2"
+          alt=""
         />
         <div class="div-8">
           <div class="div-10">
             <RouterLink to="/login">LOGIN</RouterLink>
           </div>
           <div class="div-9">
-            <RouterLink to="/mypage1">MY PAGE</RouterLink>
+            <RouterLink to="/myPage1">MY PAGE</RouterLink>
           </div>
         </div>
       </div>
@@ -54,8 +55,9 @@ onMounted(() => {
               <div class="div-39">
                 <img
                   loading="lazy"
-                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
                   class="img-5"
+                  alt=""
                 />
                 <div class="div-40">루틴 챌린지</div>
               </div>
@@ -130,7 +132,6 @@ onMounted(() => {
 
 .img-2 {
   aspect-ratio: 0.95;
-  object-fit: auto;
   object-position: center;
   width: 62px;
   align-self: stretch;
@@ -187,7 +188,6 @@ onMounted(() => {
 
 .div-36 {
   display: flex;
-  justify-content: center;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
@@ -205,7 +205,7 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  flex-basis: 0%;
+  flex-basis: 0;
   flex-direction: column;
   font-weight: 700;
   white-space: nowrap;
@@ -214,22 +214,6 @@ onMounted(() => {
 @media (max-width: 991px) {
   .div-37 {
     max-width: 100%;
-    white-space: initial;
-  }
-}
-
-.div-38 {
-  align-self: center;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-@media (max-width: 991px) {
-  .div-38 {
-    max-width: 100%;
-    flex-wrap: wrap;
     white-space: initial;
   }
 }
@@ -252,7 +236,6 @@ onMounted(() => {
 
 .img-5 {
   aspect-ratio: 0.96;
-  object-fit: auto;
   object-position: center;
   width: 48px;
 }
@@ -293,7 +276,7 @@ onMounted(() => {
   display: flex;
   margin-top: 13px;
   flex-grow: 1;
-  flex-basis: 0%;
+  flex-basis: 0;
   flex-direction: column;
   font-size: 16px;
   color: #888;

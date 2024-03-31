@@ -1,57 +1,56 @@
+<script setup lang="ts">
+const categoryList = ['전체', '자기계발', '학습', '운동', '건강', '기타']
+</script>
+
 <template>
   <div class="div">
-    <div class="div-2">
-      <div class="div-3">
-        <div class="div-4">
-          <div class="div-5">ABOUT</div>
-          <div class="div-6">CHALLENGE</div>
-        </div>
-        <img
-          loading="lazy"
-          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b0763034c7461d22a83342bb2a3de914e1b46aa310b80f1b0fc3676448dd3553?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-          class="img"
-        />
-        <div class="div-7">
-          <div class="div-8">MY PAGE</div>
-          <div class="div-9">LOGIN</div>
-          <div class="div-10">JOIN</div>
-        </div>
-      </div>
-    </div>
     <div class="div-11">
       <div class="div-12">
-        <img
-          loading="lazy"
-          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-          class="img-2"
-        /><img
-          loading="lazy"
-          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-          class="img-3"
-        /><img
-          loading="lazy"
-          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-          class="img-4"
-        />
+        <el-steps style="max-width: 600px" :active="1">
+          <el-step title="진행 예정">
+            <template v-slot:icon>
+              <img
+                loading="lazy"
+                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
+                class="img-2"
+              />
+            </template>
+          </el-step>
+          <el-step title="진행중">
+            <template v-slot:icon>
+              <img
+                loading="lazy"
+                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
+                class="img-3"
+              />
+            </template>
+          </el-step>
+          <el-step title="진행 종료">
+            <template v-slot:icon>
+              <img
+                loading="lazy"
+                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
+                class="img-4"
+              />
+            </template>
+          </el-step>
+        </el-steps>
       </div>
       <img
         loading="lazy"
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/61bed56a82f823f3694ab4caf10ce2841b13e10c1a90bde563c52d7cfc947a84?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
         class="img-5"
       />
-      <div class="div-13">
-        <div class="div-14">진행예정</div>
-        <div class="div-15">진행중</div>
-        <div class="div-16">진행종료</div>
-      </div>
+      <!--      <div class="div-13">-->
+      <!--        <div class="div-14">진행예정</div>-->
+      <!--        <div class="div-15">진행중</div>-->
+      <!--        <div class="div-16">진행종료</div>-->
+      <!--      </div>-->
       <div class="div-17">
         <div class="div-18">
-          <div class="div-19">전체</div>
-          <div class="div-20">자기계발</div>
-          <div class="div-21">학습</div>
-          <div class="div-22">운동</div>
-          <div class="div-23">건강</div>
-          <div class="div-24">기타</div>
+          <el-button v-for="c in categoryList" type="warning" class="category-btn" round>
+            {{ c }}
+          </el-button>
         </div>
         <div class="div-25">인기순</div>
       </div>
@@ -167,42 +166,6 @@
         <div class="div-66">↑</div>
       </div>
     </div>
-    <div class="div-67">
-      <div class="div-68">
-        <div class="div-69">
-          <div class="div-70">
-            <div class="div-71">
-              <div class="div-72">
-                <img
-                  loading="lazy"
-                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/716e08bb421be8e566c42aa650035e4c917c07e7e9ca4f1dd9d3d14d0d572375?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-                  class="img-12"
-                />
-                <div class="div-73">루틴챌린지</div>
-              </div>
-              <div class="div-74">Info</div>
-            </div>
-            <div class="div-75">C/S Center</div>
-          </div>
-          <div class="div-76">
-            <div class="div-77">
-              <span style="font-weight: 700; color: rgba(136, 136, 136, 1)">CEO.</span>
-              멀티 IT 8조
-              <span style="font-weight: 700; color: rgba(136, 136, 136, 1)">Addr.</span>
-              서울특별시 강남구 언주로 508 14층 (역삼동, 서울상록빌딩)<br /><span
-                style="font-weight: 700; color: rgba(136, 136, 136, 1)"
-                >Tel/Fax.</span
-              >
-              02-1111-2222
-              <span style="font-weight: 700; color: rgba(136, 136, 136, 1)">Business Num.</span>
-              211-07-77799
-            </div>
-            <div class="div-78">02-1111-3333 ~ 4 | AM 10:00 ~ PM 6:00</div>
-          </div>
-        </div>
-        <div class="div-79">Copyright by Routine Challenge Co., Ltd. All rights reserved.</div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -211,111 +174,6 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-}
-
-.div-2 {
-  border-bottom: 1px solid #eee;
-  background-color: rgba(249, 249, 249, 0);
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 187.5%;
-  padding: 18px 60px;
-}
-
-@media (max-width: 991px) {
-  .div-2 {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-}
-
-.div-3 {
-  display: flex;
-  width: 1194px;
-  max-width: 100%;
-  align-items: end;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-@media (max-width: 991px) {
-  .div-3 {
-    flex-wrap: wrap;
-  }
-}
-
-.div-4 {
-  display: flex;
-  margin-top: 44px;
-  justify-content: space-between;
-  gap: 20px;
-  white-space: nowrap;
-}
-
-@media (max-width: 991px) {
-  .div-4 {
-    margin-top: 40px;
-    white-space: initial;
-  }
-}
-
-.div-5 {
-  color: #aaa;
-  font-family:
-    Noto Sans,
-    sans-serif;
-}
-
-.div-6 {
-  color: #999;
-  font-family:
-    Noto Sans,
-    sans-serif;
-}
-
-.img {
-  aspect-ratio: 0.95;
-  object-fit: auto;
-  object-position: center;
-  width: 62px;
-  align-self: stretch;
-}
-
-.div-7 {
-  display: flex;
-  margin-top: 44px;
-  justify-content: space-between;
-  gap: 20px;
-  color: #aaa;
-}
-
-@media (max-width: 991px) {
-  .div-7 {
-    margin-top: 40px;
-  }
-}
-
-.div-8 {
-  font-family:
-    Noto Sans,
-    sans-serif;
-}
-
-.div-9 {
-  font-family:
-    Noto Sans,
-    sans-serif;
-}
-
-.div-10 {
-  font-family:
-    Noto Sans,
-    sans-serif;
 }
 
 .div-11 {
@@ -457,113 +315,6 @@
     max-width: 100%;
     flex-wrap: wrap;
     white-space: initial;
-  }
-}
-
-.div-19 {
-  font-family:
-    Noto Sans,
-    sans-serif;
-  border-radius: 30px;
-  background-color: #f90;
-  flex-grow: 1;
-  justify-content: center;
-  padding: 12px 34px;
-}
-
-@media (max-width: 991px) {
-  .div-19 {
-    white-space: initial;
-    padding: 0 20px;
-  }
-}
-
-.div-20 {
-  font-family:
-    Noto Sans,
-    sans-serif;
-  border-radius: 30px;
-  background-color: rgba(255, 153, 0, 0.6);
-  flex-grow: 1;
-  justify-content: center;
-  padding: 12px 18px;
-}
-
-@media (max-width: 991px) {
-  .div-20 {
-    white-space: initial;
-  }
-}
-
-.div-21 {
-  font-family:
-    Noto Sans,
-    sans-serif;
-  border-radius: 30px;
-  background-color: rgba(255, 153, 0, 0.6);
-  flex-grow: 1;
-  justify-content: center;
-  padding: 12px 34px;
-}
-
-@media (max-width: 991px) {
-  .div-21 {
-    white-space: initial;
-    padding: 0 20px;
-  }
-}
-
-.div-22 {
-  font-family:
-    Noto Sans,
-    sans-serif;
-  border-radius: 30px;
-  background-color: rgba(255, 153, 0, 0.6);
-  flex-grow: 1;
-  justify-content: center;
-  padding: 13px 34px;
-}
-
-@media (max-width: 991px) {
-  .div-22 {
-    white-space: initial;
-    padding: 0 20px;
-  }
-}
-
-.div-23 {
-  font-family:
-    Noto Sans,
-    sans-serif;
-  border-radius: 30px;
-  background-color: rgba(255, 153, 0, 0.6);
-  flex-grow: 1;
-  justify-content: center;
-  padding: 12px 35px;
-}
-
-@media (max-width: 991px) {
-  .div-23 {
-    white-space: initial;
-    padding: 0 20px;
-  }
-}
-
-.div-24 {
-  font-family:
-    Noto Sans,
-    sans-serif;
-  border-radius: 30px;
-  background-color: rgba(255, 153, 0, 0.6);
-  flex-grow: 1;
-  justify-content: center;
-  padding: 12px 35px;
-}
-
-@media (max-width: 991px) {
-  .div-24 {
-    white-space: initial;
-    padding: 0 20px;
   }
 }
 
@@ -1287,190 +1038,6 @@
 
 @media (max-width: 991px) {
   .div-66 {
-    white-space: initial;
-  }
-}
-
-.div-67 {
-  border-top: 1px solid #ccc;
-  background-color: #fff;
-  display: flex;
-  margin-top: 58px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding: 39px 60px;
-}
-
-@media (max-width: 991px) {
-  .div-67 {
-    max-width: 100%;
-    margin-top: 40px;
-    padding: 0 20px;
-  }
-}
-
-.div-68 {
-  display: flex;
-  width: 1017px;
-  max-width: 100%;
-  flex-direction: column;
-}
-
-.div-69 {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-@media (max-width: 991px) {
-  .div-69 {
-    max-width: 100%;
-    flex-wrap: wrap;
-  }
-}
-
-.div-70 {
-  display: flex;
-  flex-grow: 1;
-  flex-basis: 0%;
-  flex-direction: column;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-@media (max-width: 991px) {
-  .div-70 {
-    max-width: 100%;
-    white-space: initial;
-  }
-}
-
-.div-71 {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-@media (max-width: 991px) {
-  .div-71 {
-    max-width: 100%;
-    flex-wrap: wrap;
-    white-space: initial;
-  }
-}
-
-.div-72 {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  font-size: 30px;
-  color: rgba(255, 153, 0, 0.5);
-  text-align: center;
-  line-height: 100%;
-}
-
-@media (max-width: 991px) {
-  .div-72 {
-    white-space: initial;
-  }
-}
-
-.img-12 {
-  aspect-ratio: 0.96;
-  object-fit: auto;
-  object-position: center;
-  width: 48px;
-}
-
-.div-73 {
-  font-family:
-    Noto Sans,
-    sans-serif;
-  flex-grow: 1;
-  margin: auto 0;
-}
-
-.div-74 {
-  color: #777;
-  margin: auto 0;
-  font:
-    18px/111% Noto Sans,
-    sans-serif;
-}
-
-.div-75 {
-  color: #777;
-  align-self: end;
-  margin-top: 14px;
-  font:
-    18px/111% Noto Sans,
-    sans-serif;
-}
-
-@media (max-width: 991px) {
-  .div-75 {
-    white-space: initial;
-  }
-}
-
-.div-76 {
-  display: flex;
-  margin-top: 13px;
-  flex-grow: 1;
-  flex-basis: 0%;
-  flex-direction: column;
-  font-size: 16px;
-  color: #888;
-  font-weight: 400;
-}
-
-@media (max-width: 991px) {
-  .div-76 {
-    max-width: 100%;
-  }
-}
-
-.div-77 {
-  font-family:
-    Noto Sans,
-    sans-serif;
-  line-height: 20px;
-}
-
-@media (max-width: 991px) {
-  .div-77 {
-    max-width: 100%;
-  }
-}
-
-.div-78 {
-  font-family:
-    Noto Sans,
-    sans-serif;
-  margin-top: 18px;
-}
-
-@media (max-width: 991px) {
-  .div-78 {
-    max-width: 100%;
-  }
-}
-
-.div-79 {
-  color: #8d8c8c;
-  align-self: center;
-  margin-top: 29px;
-  white-space: nowrap;
-  font:
-    400 14px/143% Noto Sans,
-    sans-serif;
-}
-
-@media (max-width: 991px) {
-  .div-79 {
     white-space: initial;
   }
 }

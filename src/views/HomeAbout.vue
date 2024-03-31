@@ -3,9 +3,8 @@
     <div class="div-2">
       <img
         loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
+        srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/601e630f70f57a858df2019b5b4658333d3788cfbaf8a39c3b961f4d7a8a0dd8?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
         class="img"
-        alt=""
       />
       <div class="div-3">
         <div class="div-12">루틴 챌린지</div>
@@ -31,14 +30,13 @@
       <div class="div-15">
         <img
           loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
+          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/17e2472c0693eb0eeb2a176dab3d533fbbc278516cf61103954523d033b0dc8e?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
           class="img"
-          alt=""
         />
         <div class="div-16">
           <div class="div-17">지금, 루틴 챌린지에서<br />당신의 챌린지를 공유하세요!</div>
           <div class="div-18">
-            하루 루틴을 ToDoList 로 관리하며 기록할 수 있습니다.<br />친구, 가족, 회원들과 챌린지를
+            하루 루틴을 To Do List로 관리하며 기록할 수 있습니다.<br />친구, 가족, 회원들과 챌린지를
             공유하며 함께할 수 있습니다.
           </div>
           <div class="div-19">
@@ -51,9 +49,8 @@
         <div class="div-23">당신이 원하는 모든 챌린지에 참여할 수 있습니다.</div>
         <img
           loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
+          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b64e0e22dd47d4ba519fb4600cebdd10819a641952721a9729e9993d89ed43ce?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
           class="img-3"
-          alt=""
         />
       </div>
       <div class="div-24">
@@ -62,9 +59,8 @@
             <div class="column">
               <img
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
+                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/3fa7f65cc62e31eb1a4519b85cf381323df5eb8a08aa83feeccd67c2774f66b7?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
                 class="img-4"
-                alt=""
               />
             </div>
             <div class="column-2">
@@ -94,6 +90,7 @@
 }
 
 .div-2 {
+  display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
@@ -138,11 +135,24 @@
   }
 }
 
+.div-6 {
+  color: #aaa;
+  font-family:
+    Noto Sans,
+    sans-serif;
+}
+
+.div-11 {
+  font-family:
+    Noto Sans,
+    sans-serif;
+}
+
 .div-12 {
   color: #fff;
   margin-top: 347px;
   font:
-    800 70px/107% Noto Sans,
+    800 50px/107% Noto Sans,
     sans-serif;
 }
 
@@ -158,7 +168,7 @@
   color: #ffd2ab;
   margin-top: 23px;
   font:
-    50px/75px Inter,
+    40px/75px Inter,
     sans-serif;
 }
 
@@ -185,6 +195,7 @@
 }
 
 .div-15 {
+  disply: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
@@ -266,6 +277,14 @@
   }
 }
 
+.div-20 {
+  border-radius: 5px;
+  border: 3px solid #f90;
+  background-color: #fff;
+  width: 28px;
+  height: 28px;
+}
+
 .div-21 {
   font-feature-settings: 'case' on;
   font-family:
@@ -306,6 +325,7 @@
     Noto Sans,
     sans-serif;
   align-self: center;
+  font-size: 40px;
 }
 
 @media (max-width: 991px) {
@@ -321,8 +341,8 @@
   align-self: center;
   aspect-ratio: 11.11;
   object-position: center;
-  width: 95%;
-  margin: 113px 0 142px;
+  width: 85%;
+  margin: 40px;
 }
 
 @media (max-width: 991px) {
@@ -370,7 +390,7 @@
   .div-26 {
     flex-direction: column;
     align-items: stretch;
-    gap: 0;
+    gap: 0px;
   }
 }
 
@@ -379,7 +399,7 @@
   flex-direction: column;
   line-height: normal;
   width: 64%;
-  margin-left: 0;
+  margin-left: 0px;
 }
 
 @media (max-width: 991px) {

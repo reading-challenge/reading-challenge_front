@@ -1,12 +1,12 @@
 @import './base.css';
 
-html, body {
-    height: 100%;
-    width: 100vw;
+body {
+    width: 100%;
+    min-width: 611px;
+    min-height: 100vh
 }
 
 #app {
-    height: 100%;
     font-weight: normal;
 }
 
@@ -14,21 +14,20 @@ html, body {
 /* element-plus 컴포넌트 css */
 .el-container {
     height: 100% !important;
+    min-height: 100vh;
 }
 
 .el-main {
     display: flex !important;
     padding: 0 !important;
     flex-direction: column;
-
-    overflow-y: scroll; /* 스크롤 기능 활성화 */
-    scrollbar-width: none; /* Firefox용 스크롤바 숨기기 */
-    -ms-overflow-style: none;
 }
 
 .el-header {
     display: flex;
-    margin: 10px 0;
+    padding: 10px 0 !important;
+    width: 100%;
+    min-width: 611px;
     height: fit-content !important;
 }
 

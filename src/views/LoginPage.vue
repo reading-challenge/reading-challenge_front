@@ -47,6 +47,7 @@
   background-color: rgba(255, 103, 0, 0.05);
   display: flex;
   flex-grow: 1;
+  height: 660px;
   width: 100%;
   justify-content: center;
   align-items: center;

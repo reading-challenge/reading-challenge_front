@@ -173,7 +173,8 @@ onMounted(() => {
 .div-34 {
   background-color: #fff;
   display: flex;
-  width: 100vw;
+  width: 100%;
+  min-width: 611px;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -190,7 +191,6 @@ onMounted(() => {
 .div-35 {
   display: flex;
   width: 100%;
-  max-width: 100%;
   flex-direction: column;
 }
 

@@ -90,7 +90,7 @@
 }
 
 .div-2 {
-  disply: flex;
+  display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
@@ -152,7 +152,7 @@
   color: #fff;
   margin-top: 347px;
   font:
-    800 70px/107% Noto Sans,
+    800 50px/107% Noto Sans,
     sans-serif;
 }
 
@@ -168,7 +168,7 @@
   color: #ffd2ab;
   margin-top: 23px;
   font:
-    50px/75px Inter,
+    40px/75px Inter,
     sans-serif;
 }
 
@@ -325,6 +325,7 @@
     Noto Sans,
     sans-serif;
   align-self: center;
+  font-size: 40px;
 }
 
 @media (max-width: 991px) {
@@ -339,10 +340,9 @@
 .img-3 {
   align-self: center;
   aspect-ratio: 11.11;
-  object-fit: auto;
   object-position: center;
-  width: 95%;
-  margin: 113px 0 142px;
+  width: 85%;
+  margin: 40px;
 }
 
 @media (max-width: 991px) {
@@ -410,7 +410,6 @@
 
 .img-4 {
   aspect-ratio: 1.06;
-  object-fit: auto;
   object-position: center;
   width: 100%;
   flex-grow: 1;
@@ -508,26 +507,6 @@
   .div-31 {
     white-space: initial;
     margin: 40px 10px 0 0;
-  }
-}
-
-.div-32 {
-  border-radius: 5px;
-  border: 3px solid #f90;
-  background-color: #f90;
-  align-self: start;
-  aspect-ratio: 1.08;
-  justify-content: center;
-  color: #fff;
-  padding: 7px;
-  font:
-    25px Sen,
-    sans-serif;
-}
-
-@media (max-width: 991px) {
-  .div-32 {
-    white-space: initial;
   }
 }
 

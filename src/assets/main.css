@@ -1,26 +1,38 @@
 @import './base.css';
 
+html, body {
+    height: 100%;
+    min-heigth: 100vh;
+}
+
 #app {
-    min-height: inherit;
+    height: 100%;
     font-weight: normal;
 }
 
-a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
-    transition: 0.4s;
-    padding: 3px;
-}
 
 /* element-plus 컴포넌트 css */
+.el-container {
+    height: 100% !important;
+}
+
+.el-main {
+    display: flex !important;
+    padding: 0 !important;
+    flex-direction: column;
+}
+
 .el-header {
-    margin: 17px 0 5px;
+    display: flex;
+    margin: 10px 0;
+    height: fit-content !important;
 }
 
 .el-footer {
-    margin: 5px 0 17px;
-    padding: 10px;
-    height: fit-content;
+    display: flex !important;
+    padding: 0 !important;
+    height: fit-content !important;
+    max-height: 200px;
 }
 
 .el-checkbox > span > span {
@@ -38,6 +50,34 @@ a {
 .el-checkbox__inner::after {
     height: 12px !important;
     width: 12px !important;
+}
+
+.el-backtop > i > svg > path {
+    fill: orangered;
+}
+
+.el-button + .el-button {
+    margin-left: 0 !important;
+}
+
+.el-button--warning.category-btn {
+    background-color: rgba(255, 153, 0, 0.6) !important;
+    border-color: rgba(255, 153, 0, 0.6) !important;
+    border-radius: 30px !important;
+
+    width: 100px;
+    height: 50px;
+
+    font-size: 18px;
+}
+
+.el-button--warning.category-btn:hover {
+    background-color: #f90 !important;
+    border-color: #f90 !important;
+}
+
+.el-input__wrapper.is-focus {
+    box-shadow: 0 0 0 1px #ff6b00 !important;
 }
 
 

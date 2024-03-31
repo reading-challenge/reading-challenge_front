@@ -14,10 +14,10 @@ onMounted(() => {
       <div class="div-4">
         <div class="div-5">
           <div class="div-6">
-            <RouterLink to="/home">ABOUT</RouterLink>
+            <RouterLink class="header-menu" to="/home">ABOUT</RouterLink>
           </div>
           <div class="div-7">
-            <RouterLink to="/main">CHALLENGE</RouterLink>
+            <RouterLink class="header-menu" to="/main">CHALLENGE</RouterLink>
           </div>
         </div>
 
@@ -28,10 +28,10 @@ onMounted(() => {
         />
         <div class="div-8">
           <div class="div-10">
-            <RouterLink to="/login">LOGIN</RouterLink>
+            <RouterLink class="header-menu" to="/login">LOGIN</RouterLink>
           </div>
           <div class="div-9">
-            <RouterLink to="/mypage1">MY PAGE</RouterLink>
+            <RouterLink class="header-menu" to="/mypage1">MY PAGE</RouterLink>
           </div>
         </div>
       </div>
@@ -40,17 +40,14 @@ onMounted(() => {
     <el-main>
       <RouterView v-slot="{ Component }">
         <transition>
-          <component :is="Component" style="width: 100%; height: 100%" />
+          <component :is="Component" style="width: 100%" />
         </transition>
       </RouterView>
-    </el-main>
 
-    <el-footer>
       <div class="div-34">
         <div class="div-35">
           <div class="div-36">
             <div class="div-37">
-              <!--              <div class="div-38">-->
               <div class="div-39">
                 <img
                   loading="lazy"
@@ -59,7 +56,6 @@ onMounted(() => {
                 />
                 <div class="div-40">루틴 챌린지</div>
               </div>
-              <!--              </div>-->
             </div>
             <div class="div-43">
               <div class="div-41">Info</div>
@@ -81,13 +77,22 @@ onMounted(() => {
           <div class="div-46">Copyright by Routine Challenge Co., Ltd. All rights reserved.</div>
         </div>
       </div>
-    </el-footer>
+
+      <el-backtop />
+    </el-main>
   </el-container>
 </template>
 
 <style></style>
 
 <style scoped>
+.header-menu {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.4s;
+  padding: 3px;
+}
+
 .div-4 {
   align-self: center;
   display: flex;
@@ -130,7 +135,6 @@ onMounted(() => {
 
 .img-2 {
   aspect-ratio: 0.95;
-  object-fit: auto;
   object-position: center;
   width: 62px;
   align-self: stretch;
@@ -165,10 +169,11 @@ onMounted(() => {
 .div-34 {
   background-color: #fff;
   display: flex;
-  width: 100%;
+  width: 100vw;
   justify-content: center;
   align-items: center;
-  padding: 39px 60px;
+  padding: 20px;
+  height: 200px;
 }
 
 @media (max-width: 991px) {
@@ -180,7 +185,7 @@ onMounted(() => {
 
 .div-35 {
   display: flex;
-  width: 1017px;
+  width: 100%;
   max-width: 100%;
   flex-direction: column;
 }
@@ -191,6 +196,7 @@ onMounted(() => {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  width: 100%;
 }
 
 @media (max-width: 991px) {
@@ -218,22 +224,6 @@ onMounted(() => {
   }
 }
 
-.div-38 {
-  align-self: center;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-@media (max-width: 991px) {
-  .div-38 {
-    max-width: 100%;
-    flex-wrap: wrap;
-    white-space: initial;
-  }
-}
-
 .div-39 {
   display: flex;
   justify-content: space-between;
@@ -252,7 +242,6 @@ onMounted(() => {
 
 .img-5 {
   aspect-ratio: 0.96;
-  object-fit: auto;
   object-position: center;
   width: 48px;
 }
@@ -292,7 +281,7 @@ onMounted(() => {
 .div-43 {
   display: flex;
   margin-top: 13px;
-  flex-grow: 1;
+  flex-grow: 2;
   flex-basis: 0%;
   flex-direction: column;
   font-size: 16px;
@@ -334,7 +323,7 @@ onMounted(() => {
 .div-46 {
   color: #8d8c8c;
   align-self: center;
-  margin-top: 29px;
+  margin-top: 10px;
   white-space: nowrap;
   font:
     400 14px/143% Noto Sans,

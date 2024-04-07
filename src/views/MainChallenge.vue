@@ -1,1044 +1,219 @@
 <script setup lang="ts">
+import { ArrowDown } from '@element-plus/icons-vue'
+import { onMounted, ref } from 'vue'
+
+// 조회 카테고리 드롭다운
 const categoryList = ['전체', '자기계발', '학습', '운동', '건강', '기타']
+const selectedCategory = ref('')
+const onClickCategory = (event: PointerEvent) => {
+  if (event.target) {
+    const selectedDropEl = event.target as HTMLElement
+    selectedCategory.value = selectedDropEl.innerText
+  }
+}
+
+// 정렬 기준 드롭다운
+const sortList = ['인기순', '최신순', '모집마감일순']
+const selectedSort = ref('')
+const onClickSort = (event: PointerEvent) => {
+  if (event.target) {
+    const selectedDropEl = event.target as HTMLElement
+    selectedSort.value = selectedDropEl.innerText
+  }
+}
+
+// 챌린지 목록
+const challengeList = [
+  { title: '조깅 챌린지', content: '챌린지 소개 및 하고싶은 말', endDate: '1' },
+  { title: '조깅 챌린지', content: '챌린지 소개 및 하고싶은 말', endDate: '1' },
+  { title: '조깅 챌린지', content: '챌린지 소개 및 하고싶은 말', endDate: '1' },
+  { title: '조깅 챌린지', content: '챌린지 소개 및 하고싶은 말', endDate: '1' },
+  { title: '조깅 챌린지', content: '챌린지 소개 및 하고싶은 말', endDate: '1' },
+  { title: '조깅 챌린지', content: '챌린지 소개 및 하고싶은 말', endDate: '1' },
+  { title: '조깅 챌린지', content: '챌린지 소개 및 하고싶은 말', endDate: '1' },
+  { title: '조깅 챌린지', content: '챌린지 소개 및 하고싶은 말', endDate: '1' }
+]
+
+// 챌린지 생성 버튼 위치
+const shouldShiftPosition = ref(false)
+window.addEventListener('scroll', () => {
+  shouldShiftPosition.value = window.scrollY === 0
+})
+
+onMounted(() => {
+  selectedCategory.value = categoryList[0]
+  selectedSort.value = sortList[0]
+})
 </script>
 
 <template>
   <div class="div">
-    <div class="div-11">
-      <div class="div-12">
-        <el-steps style="max-width: 600px" :active="1">
-          <el-step title="진행 예정">
-            <template v-slot:icon>
-              <img
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c32552c0487ba98d65f4e134381daa4c023e77e218d71ad7b0bb24b988ac8ff?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-                class="img-2"
-              />
-            </template>
-          </el-step>
-          <el-step title="진행중">
-            <template v-slot:icon>
-              <img
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b35bdb47a6c7d2e4a0fc4a98f2189376c47875828f1a9fc2c1eb1c39bbf0a35a?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-                class="img-3"
-              />
-            </template>
-          </el-step>
-          <el-step title="진행 종료">
-            <template v-slot:icon>
-              <img
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/40523f88dcb7959935f32f9d95842e5571090575891787021c5695ff346ec8a0?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-                class="img-4"
-              />
-            </template>
-          </el-step>
-        </el-steps>
-      </div>
-      <img
-        loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/61bed56a82f823f3694ab4caf10ce2841b13e10c1a90bde563c52d7cfc947a84?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-        class="img-5"
-      />
-      <!--      <div class="div-13">-->
-      <!--        <div class="div-14">진행예정</div>-->
-      <!--        <div class="div-15">진행중</div>-->
-      <!--        <div class="div-16">진행종료</div>-->
-      <!--      </div>-->
-      <div class="div-17">
-        <div class="div-18">
-          <el-button v-for="c in categoryList" type="warning" class="category-btn" round>
-            {{ c }}
-          </el-button>
-        </div>
-        <div class="div-25">인기순</div>
-      </div>
-      <div class="div-26">
-        <div class="div-27">
-          <div class="column">
-            <div class="div-28">
-              <img
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/5fc0958fdb711db872fe7aaa858fad102c1778d847d670427aa3c5a5620ff277?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/5fc0958fdb711db872fe7aaa858fad102c1778d847d670427aa3c5a5620ff277?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5fc0958fdb711db872fe7aaa858fad102c1778d847d670427aa3c5a5620ff277?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/5fc0958fdb711db872fe7aaa858fad102c1778d847d670427aa3c5a5620ff277?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/5fc0958fdb711db872fe7aaa858fad102c1778d847d670427aa3c5a5620ff277?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5fc0958fdb711db872fe7aaa858fad102c1778d847d670427aa3c5a5620ff277?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/5fc0958fdb711db872fe7aaa858fad102c1778d847d670427aa3c5a5620ff277?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/5fc0958fdb711db872fe7aaa858fad102c1778d847d670427aa3c5a5620ff277?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-                class="img-6"
-              />
-              <div class="div-29">
-                <div class="div-30">공부 챌린지 이름 가나다</div>
-                <div class="div-31">내용 및 하고싶은 말</div>
-                <div class="div-32">모잡마감 3일 전</div>
-              </div>
-            </div>
-          </div>
-          <div class="column-2">
-            <div class="div-33">
-              <img
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/7efb364259027e55f96b2bdadd58075ea3149c398df78bdec79a8f9a8ba158bc?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7efb364259027e55f96b2bdadd58075ea3149c398df78bdec79a8f9a8ba158bc?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7efb364259027e55f96b2bdadd58075ea3149c398df78bdec79a8f9a8ba158bc?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7efb364259027e55f96b2bdadd58075ea3149c398df78bdec79a8f9a8ba158bc?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7efb364259027e55f96b2bdadd58075ea3149c398df78bdec79a8f9a8ba158bc?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7efb364259027e55f96b2bdadd58075ea3149c398df78bdec79a8f9a8ba158bc?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7efb364259027e55f96b2bdadd58075ea3149c398df78bdec79a8f9a8ba158bc?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7efb364259027e55f96b2bdadd58075ea3149c398df78bdec79a8f9a8ba158bc?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-                class="img-7"
-              />
-              <div class="div-34">
-                <div class="div-35">조깅 챌린지</div>
-                <div class="div-36">
-                  내용 및 하고싶은 말 가나다라 마바사 아자차카 타파하 조깅 공부 학습 독서 요가 건강
-                  그리고 어쩌구
-                </div>
-                <div class="div-37">모집마감 1일 전</div>
-              </div>
-            </div>
-          </div>
-          <div class="column-3">
-            <div class="div-38">
-              <img
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/7d0d63b96bbec2a5a14eba824ad0077e1b9f65ea5fe98bb57ccebcbfcc9c9d63?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7d0d63b96bbec2a5a14eba824ad0077e1b9f65ea5fe98bb57ccebcbfcc9c9d63?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7d0d63b96bbec2a5a14eba824ad0077e1b9f65ea5fe98bb57ccebcbfcc9c9d63?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7d0d63b96bbec2a5a14eba824ad0077e1b9f65ea5fe98bb57ccebcbfcc9c9d63?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7d0d63b96bbec2a5a14eba824ad0077e1b9f65ea5fe98bb57ccebcbfcc9c9d63?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7d0d63b96bbec2a5a14eba824ad0077e1b9f65ea5fe98bb57ccebcbfcc9c9d63?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7d0d63b96bbec2a5a14eba824ad0077e1b9f65ea5fe98bb57ccebcbfcc9c9d63?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7d0d63b96bbec2a5a14eba824ad0077e1b9f65ea5fe98bb57ccebcbfcc9c9d63?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-                class="img-8"
-              />
-              <div class="div-39">
-                <div class="div-40">건강식/다이어트 챌린지 이름</div>
-                <div class="div-41">내용 및 하고싶은 말 가나다라 마바사</div>
-                <div class="div-42">모집마감 7일 전</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="div-43">
-        <div class="div-44">
-          <div class="div-45">
-            <div class="column">
-              <div class="div-46">
-                <img
-                  loading="lazy"
-                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/64dff98ed48b3dee1f2bd96b66c0e486ea528df366ecc447b6e0855e7d0c0269?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/64dff98ed48b3dee1f2bd96b66c0e486ea528df366ecc447b6e0855e7d0c0269?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/64dff98ed48b3dee1f2bd96b66c0e486ea528df366ecc447b6e0855e7d0c0269?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/64dff98ed48b3dee1f2bd96b66c0e486ea528df366ecc447b6e0855e7d0c0269?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/64dff98ed48b3dee1f2bd96b66c0e486ea528df366ecc447b6e0855e7d0c0269?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/64dff98ed48b3dee1f2bd96b66c0e486ea528df366ecc447b6e0855e7d0c0269?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/64dff98ed48b3dee1f2bd96b66c0e486ea528df366ecc447b6e0855e7d0c0269?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/64dff98ed48b3dee1f2bd96b66c0e486ea528df366ecc447b6e0855e7d0c0269?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-                  class="img-9"
-                />
-                <div class="div-47">
-                  <div class="div-48">비타민 챌린지 제목</div>
-                  <div class="div-49">
-                    내용 및 하고싶은 말 가나다라 마바사 아자차카 타파하 에이비씨디 이 에프
-                  </div>
-                  <div class="div-50">모집마감 13일 전</div>
-                </div>
-              </div>
-            </div>
-            <div class="column-4">
-              <div class="div-51">
-                <img
-                  loading="lazy"
-                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/6e2d999e7c76151da4c592ffec2e2ed5e9ca77a1840aec7e680ad8c39d757592?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/6e2d999e7c76151da4c592ffec2e2ed5e9ca77a1840aec7e680ad8c39d757592?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6e2d999e7c76151da4c592ffec2e2ed5e9ca77a1840aec7e680ad8c39d757592?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/6e2d999e7c76151da4c592ffec2e2ed5e9ca77a1840aec7e680ad8c39d757592?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/6e2d999e7c76151da4c592ffec2e2ed5e9ca77a1840aec7e680ad8c39d757592?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6e2d999e7c76151da4c592ffec2e2ed5e9ca77a1840aec7e680ad8c39d757592?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/6e2d999e7c76151da4c592ffec2e2ed5e9ca77a1840aec7e680ad8c39d757592?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/6e2d999e7c76151da4c592ffec2e2ed5e9ca77a1840aec7e680ad8c39d757592?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-                  class="img-10"
-                />
-                <div class="div-52">
-                  <div class="div-53">독서 챌린지 이름 제목 가나다</div>
-                  <div class="div-54">
-                    내용 및 하고싶은 말 가나다라 마바사 아자차카 타파하 에이비씨디 이 에프
-                  </div>
-                  <div class="div-55">모집마감 11일 전</div>
-                </div>
-              </div>
-            </div>
-            <div class="column-5">
-              <div class="div-56">
-                <img
-                  loading="lazy"
-                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/a8ab2117d6c0380d8e05d05d72a23aceb9972dac4792e37a24c04a45861950da?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8ab2117d6c0380d8e05d05d72a23aceb9972dac4792e37a24c04a45861950da?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8ab2117d6c0380d8e05d05d72a23aceb9972dac4792e37a24c04a45861950da?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8ab2117d6c0380d8e05d05d72a23aceb9972dac4792e37a24c04a45861950da?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8ab2117d6c0380d8e05d05d72a23aceb9972dac4792e37a24c04a45861950da?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8ab2117d6c0380d8e05d05d72a23aceb9972dac4792e37a24c04a45861950da?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8ab2117d6c0380d8e05d05d72a23aceb9972dac4792e37a24c04a45861950da?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8ab2117d6c0380d8e05d05d72a23aceb9972dac4792e37a24c04a45861950da?apiKey=d213af4abfe044f4b8c2d54b9aa44ab0&"
-                  class="img-11"
-                />
-                <div class="div-57">
-                  <div class="div-58">요가 챌린지</div>
-                  <div class="div-59">
-                    내용 및 하고싶은 말 가나다라 마바사 아자차카 타파하 에이비씨디 이 에프
-                  </div>
-                  <div class="div-60">모집종료</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="div-61">
-          <div class="div-62">챌린지 생성</div>
-          <div class="div-63">+</div>
-        </div>
-      </div>
-      <div class="div-64">
-        <div class="div-65">&lt; 1 / 1 &gt;</div>
-        <div class="div-66">↑</div>
-      </div>
+    <div class="process-wrapper">
+      <el-row class="process-icon-box">
+        <img
+          loading="lazy"
+          class="process-icon-img"
+          src="@/assets/image/process_start_off.png"
+          alt=""
+        />
+        <img
+          loading="lazy"
+          class="process-icon-img"
+          src="@/assets/image/process_ing_off.png"
+          alt=""
+        />
+        <img
+          loading="lazy"
+          class="process-icon-img"
+          src="@/assets/image/process_end_off.png"
+          alt=""
+        />
+      </el-row>
+      <el-row class="process-line-box">
+        <img loading="lazy" class="process-line-img" src="@/assets/image/process_line.png" alt="" />
+      </el-row>
+      <el-row class="process-name-box">
+        <span class="process-name">진행 예정</span>
+        <span class="process-name">진행중</span>
+        <span class="process-name">진행 종료</span>
+      </el-row>
     </div>
+
+    <div class="search-menu">
+      <el-dropdown class="category-dropdown">
+        <span class="el-dropdown-link">
+          {{ selectedCategory }}
+          <el-icon class="el-icon--right">
+            <arrow-down />
+          </el-icon>
+        </span>
+        <template #dropdown>
+          <el-dropdown-menu class="category-dropdown-menu">
+            <el-dropdown-item v-for="c in categoryList" @click="onClickCategory">
+              {{ c }}
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
+
+      <el-dropdown class="sort-dropdown">
+        <span class="el-dropdown-link">
+          {{ selectedSort }}
+          <el-icon class="el-icon--right">
+            <arrow-down />
+          </el-icon>
+        </span>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item v-for="s in sortList" @click="onClickSort">
+              {{ s }}
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
+    </div>
+
+    <div class="div-26">
+      <el-row :gutter="20">
+        <el-col class="challenge-col" :span="6" v-for="item in challengeList">
+          <el-card class="challenge-item">
+            <img src="@/assets/image/challenge_logo.png" alt="" style="width: 100%" />
+            <template #footer>
+              <div>{{ item.title }}</div>
+              <div>{{ item.content }}</div>
+              <div>모집마감 {{ item.endDate }}일 전</div>
+            </template>
+          </el-card>
+        </el-col>
+      </el-row>
+    </div>
+
+    <el-tooltip class="box-item" effect="dark" content="챌린지 생성" placement="top">
+      <el-button
+        class="create-challenge-btn"
+        :class="{ 'fix-position': shouldShiftPosition }"
+        type="warning"
+        circle
+        >+
+      </el-button>
+    </el-tooltip>
   </div>
 </template>
 
 <style scoped>
+.fix-position {
+  bottom: 50px !important;
+}
+
 .div {
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 
-.div-11 {
-  align-self: center;
-  display: flex;
-  margin-top: 65px;
-  width: 100%;
-  max-width: 1525px;
-  flex-direction: column;
-  align-items: start;
+.process-wrapper {
+  margin: 15px 0;
 }
 
-@media (max-width: 991px) {
-  .div-11 {
-    max-width: 100%;
-    margin-top: 40px;
-  }
+.process-icon-box {
+  justify-content: space-evenly;
 }
 
-.div-12 {
-  display: flex;
-  margin-left: 162px;
-  width: 876px;
-  max-width: 100%;
-  justify-content: space-between;
-  gap: 20px;
+.process-icon-box:hover {
+  cursor: pointer;
 }
 
-@media (max-width: 991px) {
-  .div-12 {
-    flex-wrap: wrap;
-  }
+.process-name-box {
+  justify-content: space-evenly;
 }
 
-.img-2 {
-  aspect-ratio: 1.2;
-  object-fit: auto;
-  object-position: center;
-  width: 100%;
-  flex: 1;
+.process-name-box:hover {
+  cursor: pointer;
 }
 
-.img-3 {
-  aspect-ratio: 1.2;
-  object-fit: auto;
-  object-position: center;
-  width: 100%;
-  flex: 1;
-}
-
-.img-4 {
-  aspect-ratio: 1.2;
-  object-fit: auto;
-  object-position: center;
-  width: 100%;
-  flex: 1;
-}
-
-.img-5 {
-  object-fit: auto;
-  object-position: center;
-  width: 1200px;
-  stroke-width: 5px;
-  stroke: #f90;
-  max-width: 100%;
-}
-
-.div-13 {
-  display: flex;
-  width: 889px;
-  max-width: 100%;
-  justify-content: space-between;
-  gap: 20px;
-  font-size: 20px;
-  color: #aaa;
-  font-weight: 700;
-  white-space: nowrap;
+.process-name {
   text-align: center;
-  margin: 14px 0 0 156px;
 }
 
-@media (max-width: 991px) {
-  .div-13 {
-    flex-wrap: wrap;
-    white-space: initial;
-  }
+.process-line-box {
+  justify-content: center;
 }
 
-.div-14 {
-  color: #ff6700;
-  font-family:
-    Noto Sans,
-    sans-serif;
+.process-line-img {
+  width: 90%;
 }
 
-.div-15 {
-  font-family:
-    Noto Sans,
-    sans-serif;
+.process-name {
+  color: #ff9000;
+  font-weight: bold;
 }
 
-.div-16 {
-  font-family:
-    Noto Sans,
-    sans-serif;
-}
-
-.div-17 {
+.search-menu {
   display: flex;
-  width: 1171px;
+  width: 100%;
   max-width: 100%;
-  justify-content: space-between;
   gap: 20px;
   font-weight: 400;
   white-space: nowrap;
-  margin: 57px 0 0 15px;
+  margin: 15px 0;
 }
 
 @media (max-width: 991px) {
-  .div-17 {
-    flex-wrap: wrap;
-    margin-top: 40px;
-    white-space: initial;
-  }
-}
-
-.div-18 {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  font-size: 18px;
-  color: #fff;
-  text-align: center;
-  line-height: 222%;
-}
-
-@media (max-width: 991px) {
-  .div-18 {
-    max-width: 100%;
+  .search-menu {
     flex-wrap: wrap;
     white-space: initial;
   }
-}
-
-.div-25 {
-  color: #666;
-  margin: auto 0;
-  font:
-    16px/250% Noto Sans,
-    sans-serif;
 }
 
 .div-26 {
   align-self: stretch;
-  margin-top: 30px;
 }
 
 @media (max-width: 991px) {
   .div-26 {
     max-width: 100%;
     padding-right: 20px;
-  }
-}
-
-.div-27 {
-  gap: 20px;
-  display: flex;
-}
-
-@media (max-width: 991px) {
-  .div-27 {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0px;
-  }
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-  width: 33%;
-  margin-left: 0px;
-}
-
-@media (max-width: 991px) {
-  .column {
-    width: 100%;
-  }
-}
-
-.div-28 {
-  border-radius: 30px;
-  box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.1);
-  background-color: #fceee6;
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 156%;
-  width: 100%;
-}
-
-@media (max-width: 991px) {
-  .div-28 {
-    margin-top: 25px;
-  }
-}
-
-.img-6 {
-  aspect-ratio: 1.64;
-  object-fit: auto;
-  object-position: center;
-  width: 100%;
-}
-
-.div-29 {
-  border-radius: 0px 0px 30px 30px;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  flex-direction: column;
-  padding: 31px 30px 15px;
-}
-
-@media (max-width: 991px) {
-  .div-29 {
-    padding: 0 20px;
-  }
-}
-
-.div-30 {
-  color: #333;
-  white-space: nowrap;
-  font:
-    20px/200% Noto Sans,
-    sans-serif;
-}
-
-@media (max-width: 991px) {
-  .div-30 {
-    white-space: initial;
-  }
-}
-
-.div-31 {
-  color: #666;
-  font-family:
-    Noto Sans,
-    sans-serif;
-  font-weight: 400;
-  margin-top: 16px;
-  white-space: nowrap;
-}
-
-@media (max-width: 991px) {
-  .div-31 {
-    white-space: initial;
-  }
-}
-
-.div-32 {
-  color: #ff6700;
-  text-align: right;
-  font-family:
-    Noto Sans,
-    sans-serif;
-  align-self: end;
-  margin-top: 41px;
-}
-
-@media (max-width: 991px) {
-  .div-32 {
-    margin-top: 40px;
-  }
-}
-
-.column-2 {
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-  width: 33%;
-  margin-left: 20px;
-}
-
-@media (max-width: 991px) {
-  .column-2 {
-    width: 100%;
-  }
-}
-
-.div-33 {
-  border-radius: 30px;
-  box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.1);
-  background-color: #fceee6;
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  font-weight: 700;
-  width: 100%;
-}
-
-@media (max-width: 991px) {
-  .div-33 {
-    margin-top: 25px;
-  }
-}
-
-.img-7 {
-  aspect-ratio: 1.64;
-  object-fit: auto;
-  object-position: center;
-  width: 100%;
-}
-
-.div-34 {
-  border-radius: 0px 0px 30px 30px;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  flex-direction: column;
-  padding: 31px 30px 15px;
-}
-
-@media (max-width: 991px) {
-  .div-34 {
-    padding: 0 20px;
-  }
-}
-
-.div-35 {
-  color: #333;
-  white-space: nowrap;
-  font:
-    20px/200% Noto Sans,
-    sans-serif;
-}
-
-@media (max-width: 991px) {
-  .div-35 {
-    white-space: initial;
-  }
-}
-
-.div-36 {
-  color: #666;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-family:
-    Noto Sans,
-    sans-serif;
-  font-weight: 400;
-  line-height: 25px;
-  margin-top: 16px;
-}
-
-@media (max-width: 991px) {
-  .div-36 {
-    white-space: initial;
-  }
-}
-
-.div-37 {
-  color: #ff6700;
-  text-align: right;
-  font-family:
-    Noto Sans,
-    sans-serif;
-  line-height: 156%;
-  align-self: end;
-  margin-top: 16px;
-}
-
-.column-3 {
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-  width: 33%;
-  margin-left: 20px;
-}
-
-@media (max-width: 991px) {
-  .column-3 {
-    width: 100%;
-  }
-}
-
-.div-38 {
-  border-radius: 30px;
-  box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.1);
-  background-color: #fceee6;
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 156%;
-  width: 100%;
-}
-
-@media (max-width: 991px) {
-  .div-38 {
-    margin-top: 25px;
-  }
-}
-
-.img-8 {
-  aspect-ratio: 1.64;
-  object-fit: auto;
-  object-position: center;
-  width: 100%;
-}
-
-.div-39 {
-  border-radius: 0px 0px 30px 30px;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  flex-direction: column;
-  padding: 31px 30px 15px;
-}
-
-@media (max-width: 991px) {
-  .div-39 {
-    padding: 0 20px;
-  }
-}
-
-.div-40 {
-  color: #333;
-  white-space: nowrap;
-  font:
-    20px/200% Noto Sans,
-    sans-serif;
-}
-
-@media (max-width: 991px) {
-  .div-40 {
-    white-space: initial;
-  }
-}
-
-.div-41 {
-  color: #666;
-  font-family:
-    Noto Sans,
-    sans-serif;
-  font-weight: 400;
-  margin-top: 16px;
-  white-space: nowrap;
-}
-
-@media (max-width: 991px) {
-  .div-41 {
-    white-space: initial;
-  }
-}
-
-.div-42 {
-  color: #ff6700;
-  text-align: right;
-  font-family:
-    Noto Sans,
-    sans-serif;
-  align-self: end;
-  margin-top: 41px;
-}
-
-@media (max-width: 991px) {
-  .div-42 {
-    margin-top: 40px;
-  }
-}
-
-.div-43 {
-  align-self: stretch;
-  display: flex;
-  margin-top: 30px;
-  width: 100%;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-@media (max-width: 991px) {
-  .div-43 {
-    max-width: 100%;
-    flex-wrap: wrap;
-  }
-}
-
-.div-44 {
-}
-
-@media (max-width: 991px) {
-  .div-44 {
-    max-width: 100%;
-  }
-}
-
-.div-45 {
-  gap: 20px;
-  display: flex;
-}
-
-@media (max-width: 991px) {
-  .div-45 {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0px;
-  }
-}
-
-.div-46 {
-  border-radius: 30px;
-  box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.1);
-  background-color: #fceee6;
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  font-weight: 700;
-  width: 100%;
-}
-
-@media (max-width: 991px) {
-  .div-46 {
-    margin-top: 25px;
-  }
-}
-
-.img-9 {
-  aspect-ratio: 1.64;
-  object-fit: auto;
-  object-position: center;
-  width: 100%;
-}
-
-.div-47 {
-  border-radius: 0px 0px 30px 30px;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  flex-direction: column;
-  padding: 31px 30px 15px;
-}
-
-@media (max-width: 991px) {
-  .div-47 {
-    padding: 0 20px;
-  }
-}
-
-.div-48 {
-  color: #333;
-  white-space: nowrap;
-  font:
-    20px/200% Noto Sans,
-    sans-serif;
-}
-
-@media (max-width: 991px) {
-  .div-48 {
-    white-space: initial;
-  }
-}
-
-.div-49 {
-  color: #666;
-  font-family:
-    Noto Sans,
-    sans-serif;
-  font-weight: 400;
-  line-height: 25px;
-  margin-top: 16px;
-}
-
-.div-50 {
-  color: #ff6700;
-  text-align: right;
-  font-family:
-    Noto Sans,
-    sans-serif;
-  line-height: 156%;
-  align-self: end;
-  margin-top: 16px;
-}
-
-.column-4 {
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-  width: 33%;
-  margin-left: 20px;
-}
-
-@media (max-width: 991px) {
-  .column-4 {
-    width: 100%;
-  }
-}
-
-.div-51 {
-  border-radius: 30px;
-  box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.1);
-  background-color: #fceee6;
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  font-weight: 700;
-  width: 100%;
-}
-
-@media (max-width: 991px) {
-  .div-51 {
-    margin-top: 25px;
-  }
-}
-
-.img-10 {
-  aspect-ratio: 1.64;
-  object-fit: auto;
-  object-position: center;
-  width: 100%;
-}
-
-.div-52 {
-  border-radius: 0px 0px 30px 30px;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  flex-direction: column;
-  padding: 31px 30px 15px;
-}
-
-@media (max-width: 991px) {
-  .div-52 {
-    padding: 0 20px;
-  }
-}
-
-.div-53 {
-  color: #333;
-  white-space: nowrap;
-  font:
-    20px/200% Noto Sans,
-    sans-serif;
-}
-
-@media (max-width: 991px) {
-  .div-53 {
-    white-space: initial;
-  }
-}
-
-.div-54 {
-  color: #666;
-  font-family:
-    Noto Sans,
-    sans-serif;
-  font-weight: 400;
-  line-height: 25px;
-  margin-top: 16px;
-}
-
-.div-55 {
-  color: #ff6700;
-  text-align: right;
-  font-family:
-    Noto Sans,
-    sans-serif;
-  line-height: 156%;
-  align-self: end;
-  margin-top: 16px;
-}
-
-.column-5 {
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-  width: 33%;
-  margin-left: 20px;
-}
-
-@media (max-width: 991px) {
-  .column-5 {
-    width: 100%;
-  }
-}
-
-.div-56 {
-  border-radius: 30px;
-  box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.1);
-  background-color: #fceee6;
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  font-weight: 700;
-  width: 100%;
-}
-
-@media (max-width: 991px) {
-  .div-56 {
-    margin-top: 25px;
-  }
-}
-
-.img-11 {
-  aspect-ratio: 1.64;
-  object-fit: auto;
-  object-position: center;
-  width: 100%;
-}
-
-.div-57 {
-  border-radius: 0px 0px 30px 30px;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  flex-direction: column;
-  padding: 31px 30px 15px;
-}
-
-@media (max-width: 991px) {
-  .div-57 {
-    padding: 0 20px;
-  }
-}
-
-.div-58 {
-  color: #333;
-  white-space: nowrap;
-  font:
-    20px/200% Noto Sans,
-    sans-serif;
-}
-
-@media (max-width: 991px) {
-  .div-58 {
-    white-space: initial;
-  }
-}
-
-.div-59 {
-  color: #666;
-  font-family:
-    Noto Sans,
-    sans-serif;
-  font-weight: 400;
-  line-height: 25px;
-  margin-top: 16px;
-}
-
-.div-60 {
-  color: #ff6700;
-  text-align: right;
-  font-family:
-    Noto Sans,
-    sans-serif;
-  line-height: 156%;
-  align-self: end;
-  margin-top: 16px;
-}
-
-.div-61 {
-  align-self: end;
-  display: flex;
-  margin-top: 303px;
-  gap: 15px;
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-@media (max-width: 991px) {
-  .div-61 {
-    margin-top: 40px;
-    white-space: initial;
-  }
-}
-
-.div-62 {
-  color: #000;
-  text-align: right;
-  align-self: end;
-  margin-top: 31px;
-  flex-grow: 1;
-  font:
-    20px/150% Noto Sans,
-    sans-serif;
-}
-
-@media (max-width: 991px) {
-  .div-62 {
-    white-space: initial;
-  }
-}
-
-.div-63 {
-  background-color: #ff6700;
-  border-radius: 50%;
-  aspect-ratio: 1;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  color: #fff;
-  text-align: center;
-  padding: 0 18px;
-  font:
-    50px/120% Inter,
-    sans-serif;
-}
-
-@media (max-width: 991px) {
-  .div-63 {
-    font-size: 40px;
-    white-space: initial;
-  }
-}
-
-.div-64 {
-  align-self: end;
-  display: flex;
-  width: 987px;
-  max-width: 100%;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-  font-weight: 400;
-  text-align: center;
-}
-
-@media (max-width: 991px) {
-  .div-64 {
-    flex-wrap: wrap;
-  }
-}
-
-.div-65 {
-  color: #555;
-  align-self: end;
-  margin-top: 56px;
-  flex-grow: 1;
-  flex-basis: auto;
-  font:
-    18px/111% Inter,
-    sans-serif;
-}
-
-@media (max-width: 991px) {
-  .div-65 {
-    margin-top: 40px;
-  }
-}
-
-.div-66 {
-  stroke-width: 3px;
-  background-color: #fff;
-  border-radius: 50%;
-  align-self: start;
-  aspect-ratio: 1;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  color: #999;
-  white-space: nowrap;
-  padding: 0 17px;
-  font:
-    40px/150% Inter,
-    sans-serif;
-}
-
-@media (max-width: 991px) {
-  .div-66 {
-    white-space: initial;
   }
 }
 </style>

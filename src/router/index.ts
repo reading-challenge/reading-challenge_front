@@ -34,9 +34,9 @@ const router = createRouter({
           component: () => import('../views/DetailChallenge.vue')
         },
         {
-          path: '/myPage1',
-          name: 'myPage1',
-          component: () => import('../views/MyPage1.vue')
+          path: '/myPage',
+          name: 'myPage',
+          component: () => import('../views/MyPage.vue')
         },
         {
           path: '/myPage2',

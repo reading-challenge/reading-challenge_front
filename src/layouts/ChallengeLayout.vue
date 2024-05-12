@@ -12,7 +12,12 @@ onMounted(() => {
 
 <template>
   <el-container>
-    <el-header>
+    <el-header
+      :style="{
+        backgroundColor:
+          router.currentRoute.value.name !== 'myPage' ? '#fff' : 'rgba(255, 153, 0, 0.07)'
+      }"
+    >
       <HeaderComponent></HeaderComponent>
     </el-header>
 

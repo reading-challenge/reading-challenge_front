@@ -37,6 +37,17 @@ body {
     /*border-bottom: 1px solid #dcdfe6 !important;*/
 }
 
+.el-footer {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    min-width: 611px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px !important;
+    height: fit-content !important;
+}
+
 .el-col.challenge-col {
     padding: 20px 10px;
     display: flex !important;

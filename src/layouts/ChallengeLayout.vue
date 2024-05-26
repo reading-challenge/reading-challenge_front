@@ -32,9 +32,9 @@ onMounted(() => {
 
       <el-divider />
 
-      <div class="div-34">
+      <el-footer>
         <FooterComponent></FooterComponent>
-      </div>
+      </el-footer>
 
       <el-backtop />
     </el-main>
@@ -43,22 +43,4 @@ onMounted(() => {
 
 <style></style>
 
-<style scoped>
-.div-34 {
-  background-color: #fff;
-  display: flex;
-  width: 100%;
-  min-width: 611px;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  height: 200px;
-}
-
-@media (max-width: 991px) {
-  .div-34 {
-    max-width: 100%;
-    padding: 20px;
-  }
-}
-</style>
+<style scoped></style>

@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
   <div class="div">
     <div class="div-11">
@@ -7,11 +9,11 @@
         <el-input class="loginInput" placeholder="비밀번호" />
         <el-button class="loginBtn" type="warning">LOGIN</el-button>
         <div class="div-16">
-          <RouterView class="div-17">아이디 찾기</RouterView>
+          <RouterLink class="login-menu" to="/login">아이디 찾기</RouterLink>
           <span class="div-18">|</span>
-          <RouterView class="div-19">비밀번호 찾기</RouterView>
+          <RouterLink class="login-menu" to="/login">비밀번호 찾기</RouterLink>
           <span class="div-18">|</span>
-          <RouterView class="div-21">회원가입</RouterView>
+          <RouterLink class="login-menu" to="/join">회원가입</RouterLink>
         </div>
       </div>
     </div>
@@ -114,20 +116,6 @@
   }
 }
 
-.div-17 {
-  text-align: right;
-  font-family:
-    Noto Sans,
-    sans-serif;
-  flex-grow: 1;
-}
-
-@media (max-width: 991px) {
-  .div-17 {
-    white-space: initial;
-  }
-}
-
 .div-18 {
   text-align: center;
   font-family:
@@ -135,26 +123,14 @@
     sans-serif;
 }
 
-.div-19 {
-  font-family:
-    Noto Sans,
-    sans-serif;
-  flex-grow: 1;
-}
-
-@media (max-width: 991px) {
-  .div-19 {
-    white-space: initial;
-  }
-}
-
-.div-21 {
+.login-menu {
   color: #999;
   text-align: center;
   align-self: center;
-  font:
-    400 25px/100% Noto Sans,
-    sans-serif;
+  text-decoration: none;
+}
+
+.login-menu:hover {
+  text-decoration: underline;
 }
 </style>
-<script setup lang="ts"></script>

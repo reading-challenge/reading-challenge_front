@@ -5,7 +5,13 @@ const userid: String = '루챌'
 </script>
 
 <template>
-  <div v-if="router.currentRoute.value.name !== 'myPage'" class="header-wrapper">
+  <div
+    v-if="
+      router.currentRoute.value.name !== 'myChallenge' &&
+      router.currentRoute.value.name !== 'myInfo'
+    "
+    class="header-wrapper"
+  >
     <div class="menu-group">
       <div class="div-6">
         <RouterLink class="header-menu" to="/home">ABOUT</RouterLink>

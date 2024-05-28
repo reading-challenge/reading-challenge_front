@@ -82,10 +82,10 @@ const rules = reactive<FormRules<JoinForm>>({
           <el-input v-model="formOption.nickname" placeholder="닉네임" />
         </el-form-item>
         <el-form-item label="프로필 사진" prop="profile_img">
-          <el-col class="text-center" :span="18">
+          <el-col :span="18">
             <el-input v-model="formOption.profile_img" placeholder="선택된 파일 없음" />
           </el-col>
-          <el-col class="text-center" :span="6">
+          <el-col style="padding-left: 10px" :span="6">
             <el-button type="warning">선택</el-button>
           </el-col>
         </el-form-item>
@@ -109,8 +109,12 @@ const rules = reactive<FormRules<JoinForm>>({
         </el-form-item>
 
         <el-form-item>
-          <el-button class="myinfoBtn" type="warning">수정</el-button>
-          <el-button class="myinfoBtn">회원탈퇴</el-button>
+          <el-row style="width: 100%">
+            <el-button class="myinfoBtn" type="warning">수정</el-button>
+          </el-row>
+          <el-row style="width: 100%">
+            <el-button class="myinfoBtn">회원탈퇴</el-button>
+          </el-row>
         </el-form-item>
       </el-form>
     </div>
@@ -121,6 +125,7 @@ const rules = reactive<FormRules<JoinForm>>({
 .myinfo-wrapper {
   display: flex;
   justify-content: center;
+  min-width: 700px;
 }
 
 .myinfo-subwrapper {

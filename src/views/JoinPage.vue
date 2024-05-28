@@ -54,10 +54,10 @@ const rules = reactive<FormRules<JoinForm>>({
           <el-input v-model="formOption.name" placeholder="이름" />
         </el-form-item>
         <el-form-item label="아이디" prop="id" required>
-          <el-col class="text-center" :span="18">
+          <el-col :span="18">
             <el-input v-model="formOption.id" placeholder="아이디" />
           </el-col>
-          <el-col class="text-center" :span="6">
+          <el-col style="padding-left: 10px" :span="6">
             <el-button type="warning">중복확인</el-button>
           </el-col>
         </el-form-item>
@@ -86,10 +86,10 @@ const rules = reactive<FormRules<JoinForm>>({
           <el-input v-model="formOption.nickname" placeholder="닉네임" />
         </el-form-item>
         <el-form-item label="프로필 사진" prop="profile_img">
-          <el-col class="text-center" :span="18">
+          <el-col :span="18">
             <el-input v-model="formOption.profile_img" placeholder="선택된 파일 없음" />
           </el-col>
-          <el-col class="text-center" :span="6">
+          <el-col style="padding-left: 10px" :span="6">
             <el-button type="warning">선택</el-button>
           </el-col>
         </el-form-item>
@@ -113,7 +113,7 @@ const rules = reactive<FormRules<JoinForm>>({
         </el-form-item>
 
         <el-form-item>
-          <el-button class="loginBtn" type="warning">JOIN</el-button>
+          <el-button class="joinBtn" type="warning">JOIN</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -126,16 +126,17 @@ const rules = reactive<FormRules<JoinForm>>({
   font-weight: bold;
   color: #666666;
   text-align: center;
+  margin: 10px 0;
 }
 
-.loginBtn {
+.joinBtn {
   width: 100%;
   height: 56px;
   background-color: #ff6b00;
   font-size: 20px;
 }
 
-.loginBtn:hover {
+.joinBtn:hover {
   background-color: rgba(255, 107, 0, 0.8);
 }
 

@@ -1,35 +1,206 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+body {
+    width: 100%;
+    min-width: 611px;
+    min-height: 100vh
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+#app {
+    font-weight: normal;
 }
+
+
+/* element-plus 컴포넌트 css */
+.el-container {
+    height: 100% !important;
+    min-height: 100vh;
+}
+
+.el-main {
+    display: flex !important;
+    padding: 0 !important;
+    flex-direction: column;
+    min-width: 611px;
+}
+
+.el-header {
+    display: flex;
+    width: 100%;
+    min-width: 611px;
+    height: 100px !important;
+    align-items: center;
+    /*padding: 0 20px !important;*/
+    /*position: fixed;*/
+    /*z-index: 10;*/
+    /*background-color: #ffffff;*/
+    /*border-bottom: 1px solid #dcdfe6 !important;*/
+}
+
+.el-footer {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    min-width: 611px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px !important;
+    height: fit-content !important;
+}
+
+.el-col.challenge-col {
+    padding: 20px 10px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    max-height: 500px;
+}
+
+.el-divider {
+    margin: 0 !important;
+}
+
+.el-card.challenge-item {
+    border-radius: 30px;
+    box-shadow: 1px 5px 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: #FFF9F6;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.el-card.challenge-item > .el-card__body {
+    padding: 0;
+    display: flex;
+    max-height: 350px;
+}
+
+.el-checkbox > span > span {
+    height: 28px !important;
+    width: 28px !important;
+    border-radius: 5px !important;
+    border: 3px solid #f90 !important;
+    background-color: #fff !important;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+    background-color: #f90 !important;
+}
+
+.el-checkbox__inner::after {
+    height: 12px !important;
+    width: 12px !important;
+}
+
+.el-backtop {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.el-backtop:hover {
+    background-color: rgba(255, 240, 207) !important;
+}
+
+.el-backtop > i > svg > path {
+    fill: orangered;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.el-dropdown.category-dropdown {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.12) !important;
+    background-color: rgba(255, 153, 0, 0.6) !important;
+    border-color: rgb(255, 68, 0) !important;
+    border-radius: 30px !important;
+    width: 130px;
+    height: 50px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.category-dropdown-menu {
+    width: 130px;
+    background-color: rgba(255, 153, 0, 0.6) !important;
+    border-color: rgb(255, 68, 0) !important;
+}
+
+.category-dropdown-menu > .el-dropdown-menu__item {
+    color: #ffffff;
+}
+
+.category-dropdown-menu > .el-dropdown-menu__item:hover {
+    background-color: rgba(255, 153, 0, 0.6) !important;
+    color: #ffffff !important;
+}
+
+.el-popper__arrow {
+    display: none !important;
+}
+
+.el-dropdown.sort-dropdown {
+    color: #777777;
+    font-size: 15px;
+}
+
+.el-dropdown-link {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.el-button--warning.category-btn {
+    background-color: rgba(255, 153, 0, 0.6) !important;
+    border-color: rgba(255, 153, 0, 0.6) !important;
+    border-radius: 30px !important;
+    width: 100px;
+    height: 50px;
+    font-size: 18px;
+}
+
+.el-button.create-challenge-btn {
+    background-color: rgba(255, 153, 0);
+    width: 50px !important;
+    height: 50px;
+    font-size: 40px;
+    position: fixed;
+    right: 40px;
+    bottom: 100px;
+    z-index: 5;
+}
+
+.el-button.create-challenge-btn:hover {
+    background-color: #ff6700;
+}
+
+.el-button--warning.category-btn:hover {
+    background-color: #f90 !important;
+    border-color: #f90 !important;
+}
+
+.el-input__wrapper.is-focus {
+    box-shadow: 0 0 0 1px #ff6b00 !important;
+}
+
 
 @media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+    /*a:hover {*/
+    /*    background-color: rgba(255, 103, 0, 0.2);*/
+    /*}*/
 }
 
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+    /*body {*/
+    /*  display: flex;*/
+    /*  place-items: center;*/
+    /*}*/
+    /*#app {*/
+    /*  display: grid;*/
+    /*  grid-template-columns: 1fr 1fr;*/
+    /*  padding: 0 2rem;*/
+    /*}*/
 }

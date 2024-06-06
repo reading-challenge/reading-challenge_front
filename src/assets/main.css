@@ -48,6 +48,11 @@ body {
     height: fit-content !important;
 }
 
+.el-row {
+    display: flex;
+    align-items: center;
+}
+
 .el-col.challenge-col {
     padding: 20px 10px;
     display: flex !important;

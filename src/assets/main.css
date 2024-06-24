@@ -65,7 +65,7 @@ body {
     margin: 0 !important;
 }
 
-.el-card.challenge-item {
+.el-card.challenge-item, .el-card.auth-item {
     border-radius: 30px;
     box-shadow: 1px 5px 10px 0 rgba(0, 0, 0, 0.1);
     background-color: #FFF9F6;
@@ -77,7 +77,7 @@ body {
     flex-direction: column;
 }
 
-.el-card.challenge-item > .el-card__body {
+.el-card.challenge-item > .el-card__body, .el-card.auth-item > .el-card__body {
     padding: 0;
     display: flex;
     max-height: 350px;

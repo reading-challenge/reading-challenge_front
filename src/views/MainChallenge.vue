@@ -44,6 +44,11 @@ const onClickCreateChallenge = () => {
   router.push({ name: 'createchallenge' })
 }
 
+// 챌린지 상세내용 조회
+const onClickChallenge = () => {
+  router.push({ name: 'detailchallenge' })
+}
+
 onMounted(() => {
   selectedCategory.value = categoryList[0]
   selectedSort.value = sortList[0]
@@ -119,8 +124,8 @@ onMounted(() => {
 
     <div class="div-26">
       <el-row :gutter="20">
-        <el-col class="challenge-col" :span="6" v-for="item in challengeList">
-          <el-card class="challenge-item">
+        <el-col :span="6" v-for="item in challengeList">
+          <el-card class="challenge-item" @click="onClickChallenge">
             <img src="@/assets/image/challenge_logo.png" alt="" style="width: 100%" />
             <template #footer>
               <div>{{ item.title }}</div>
@@ -157,7 +162,7 @@ onMounted(() => {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 5%;
 }
 
 .process-wrapper {
@@ -223,5 +228,9 @@ onMounted(() => {
     max-width: 100%;
     padding-right: 20px;
   }
+}
+
+.challenge-item:hover {
+  cursor: pointer;
 }
 </style>

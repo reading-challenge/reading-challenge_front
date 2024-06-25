@@ -24,18 +24,18 @@ const router = createRouter({
           component: () => import('../views/JoinPage.vue')
         },
         {
-          path: '/main',
-          name: 'main',
+          path: '/mainchallenge',
+          name: 'mainchallenge',
           component: () => import('../views/MainChallenge.vue')
         },
         {
-          path: '/create',
-          name: 'create',
+          path: '/createchallenge',
+          name: 'createchallenge',
           component: () => import('../views/CreateChallenge.vue')
         },
         {
-          path: '/detail',
-          name: 'detail',
+          path: '/detailchallenge',
+          name: 'detailchallenge',
           component: () => import('../views/DetailChallenge.vue')
         },
         {

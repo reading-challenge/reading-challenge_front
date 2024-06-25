@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ArrowDown } from '@element-plus/icons-vue'
 import { onMounted, ref } from 'vue'
+import router from '@/router'
 
 // 조회 카테고리 드롭다운
 const categoryList = ['전체', '자기계발', '학습', '운동', '건강', '기타']
@@ -34,11 +35,19 @@ const challengeList = [
   { title: '조깅 챌린지', content: '챌린지 소개 및 하고싶은 말', endDate: '1' }
 ]
 
-// 챌린지 생성 버튼 위치
+// 챌린지 생성
 const shouldShiftPosition = ref(false)
 window.addEventListener('scroll', () => {
   shouldShiftPosition.value = window.scrollY === 0
 })
+const onClickCreateChallenge = () => {
+  router.push({ name: 'createchallenge' })
+}
+
+// 챌린지 상세내용 조회
+const onClickChallenge = () => {
+  router.push({ name: 'detailchallenge' })
+}
 
 onMounted(() => {
   selectedCategory.value = categoryList[0]
@@ -115,8 +124,8 @@ onMounted(() => {
 
     <div class="div-26">
       <el-row :gutter="20">
-        <el-col class="challenge-col" :span="6" v-for="item in challengeList">
-          <el-card class="challenge-item">
+        <el-col :span="6" v-for="item in challengeList">
+          <el-card class="challenge-item" @click="onClickChallenge">
             <img src="@/assets/image/challenge_logo.png" alt="" style="width: 100%" />
             <template #footer>
               <div>{{ item.title }}</div>
@@ -127,6 +136,9 @@ onMounted(() => {
         </el-col>
       </el-row>
     </div>
+    <el-row style="display: flex; justify-content: center">
+      <el-pagination layout="prev, pager, next" :total="50" />
+    </el-row>
 
     <el-tooltip class="box-item" effect="dark" content="챌린지 생성" placement="top">
       <el-button
@@ -134,6 +146,7 @@ onMounted(() => {
         :class="{ 'fix-position': shouldShiftPosition }"
         type="warning"
         circle
+        @click="onClickCreateChallenge"
         >+
       </el-button>
     </el-tooltip>
@@ -149,7 +162,7 @@ onMounted(() => {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 5%;
 }
 
 .process-wrapper {
@@ -215,5 +228,9 @@ onMounted(() => {
     max-width: 100%;
     padding-right: 20px;
   }
+}
+
+.challenge-item:hover {
+  cursor: pointer;
 }
 </style>

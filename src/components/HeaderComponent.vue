@@ -17,7 +17,7 @@ const userid: String = '루챌'
         <RouterLink class="header-menu" to="/home">ABOUT</RouterLink>
       </div>
       <div class="div-7">
-        <RouterLink class="header-menu" to="/main">CHALLENGE</RouterLink>
+        <RouterLink class="header-menu" to="/mainchallenge">CHALLENGE</RouterLink>
       </div>
     </div>
 
@@ -45,7 +45,7 @@ const userid: String = '루챌'
         <RouterLink class="header-menu" to="/home">ABOUT</RouterLink>
       </div>
       <div class="div-7">
-        <RouterLink class="header-menu" to="/main">CHALLENGE</RouterLink>
+        <RouterLink class="header-menu" to="/mainchallenge">CHALLENGE</RouterLink>
       </div>
       <div>
         <RouterLink class="header-menu" to="/login">LOGIN</RouterLink>

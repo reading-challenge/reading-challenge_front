@@ -30,7 +30,6 @@ export const commonStore = defineStore('common', () => {
       .then((res) => {
         commonStore().appConfig = res
         utils.log('##### Read Config #####')
-        utils.log('')
         utils.log(commonStore().appConfig)
         utils.log('#######################')
 

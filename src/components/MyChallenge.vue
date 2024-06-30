@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue'
-import router from '@/router'
+import router from '@/router/router'
 
 // 챌린저 참여 현황
 const months = [

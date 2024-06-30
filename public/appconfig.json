@@ -1,0 +1,8 @@
+{
+  "appName": "reading-challenge_front",
+  "locale": "ko",
+  "apiUrl": "",
+  "isLog": true,
+  "isCallerLog": true,
+  "defaultTimeout": 10
+}

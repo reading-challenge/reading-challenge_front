@@ -1,5 +1,15 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import { RouterView } from 'vue-router'
+import { commonStore } from '@/stores/modules/common'
+import { utils } from '@/utils/utils'
+
+onMounted(async () => {
+  await commonStore().readConfig()
+  utils.log('##### appconfig.json #####')
+  utils.log(commonStore().appConfig)
+  utils.log('##########################')
+})
 </script>
 
 <template>

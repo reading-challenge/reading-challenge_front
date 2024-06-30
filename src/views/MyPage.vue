@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import router from '@/router'
+import router from '@/router/router'
 import { RouterView } from 'vue-router'
 
 let userid: String = '루챌'

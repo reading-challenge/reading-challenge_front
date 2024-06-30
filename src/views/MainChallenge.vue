@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ArrowDown } from '@element-plus/icons-vue'
 import { onMounted, ref } from 'vue'
-import router from '@/router'
+import router from '@/router/router'
 
 // 조회 카테고리 드롭다운
 const categoryList = ['전체', '자기계발', '학습', '운동', '건강', '기타']

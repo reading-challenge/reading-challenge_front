@@ -6,7 +6,7 @@ import { utils } from '@/utils/utils'
 import moment from 'moment'
 import store from '@/stores/store'
 import { commonStore } from '@/stores/modules/common'
-// import { EventName, eventBus } from '@/utils/eventbus'
+import { emitter, EventName } from '@/mitt/mitt'
 
 const appConfig = commonStore(store).appConfig
 
@@ -74,9 +74,9 @@ export const restfulAPI = {
     url = `${appConfig.apiUrl}${url}`
 
     // loading open
-    // if (isProgress) {
-    // eventBus.emit(EventName.LOADING, { isVisible: true })
-    // }
+    if (isProgress) {
+      emitter.emit(EventName.EVENT1, { isVisible: true })
+    }
 
     // 참고
     // https://velog.io/@bang9dev/axios-with-qs
@@ -85,7 +85,7 @@ export const restfulAPI = {
     //   params = qs.stringify(params, { charset: "utf-8" });
     // }
 
-    let response: APIResponse<T> = {}
+    const response: APIResponse<T> = {}
     try {
       let res: AxiosResponse
       if (method === 'POST') {
@@ -105,10 +105,9 @@ export const restfulAPI = {
       response.errMessage = error.message
     } finally {
       // loading close
-      // if (isProgress) {
-      //eventBus.emit(EventName[EventName.LOADING], { isVisible: false });
-      // eventBus.emit(EventName.LOADING, { isVisible: false })
-      // }
+      if (isProgress) {
+        emitter.emit(EventName.LOADING, { isVisible: false })
+      }
 
       response.timestamp = `${moment().format('YYYY/MM/DD HH:mm:ss')}`
       utils.log(`Res ${method} ##### ${url} : ${response.timestamp}`)

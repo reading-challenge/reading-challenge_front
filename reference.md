@@ -1,4 +1,5 @@
 ### Vue 3를 Vue 2와 비교했을 때 장점
+
 1. 성능 개선
 2. Vue 3는 Composition API 도입
    기능별로 코드 구성 => 재사용성, 가독성 높아짐. React의 훅과 유사
@@ -9,36 +10,46 @@
 5. 컴포넌트의 렌더링 위치를 지정하는 Teleport 기능
 
 ### Vue 3 - Typescript 프로젝트 파일 구조
+
 Github 참고
 https://github.com/xsf0105/my-vue3-template
 
 ### Figma Builder.io 플러그인
+
 설계한 UI 화면 Vue 코드 카피
 
 ### IntelliJ - GitHub 연동
+
 https://brunch.co.kr/@mystoryg/168
 
 ### IntelliJ - Pull Request
+
 https://ddoriya.tistory.com/entry/IntelliJ-Git-pull-request-%ED%95%98%EA%B8%B0
 
 ### IntelliJ 얼티밋 버전 설치
+
 커뮤니티 버전은 Vue, TypeScript 관련 플러그인 지원 안 함..
 
 ### IntelliJ 플러그인
+
 Grep Console - 콘솔 색상 구분
 
 ### Element-Plus 설치 및 적용
+
 https://element-plus.org/en-US/guide/installation.html
 https://element-plus.org/en-US/guide/quickstart.html
 
 ### IntelliJ - 파일 저장 시 코드 정렬
+
 설정 - 도구 - 저장 시 액션 - 코드 서식 다시 지정, Prettier 실행
 
 ### GitHub 연동
+
 git config --global user.name name
 git config --global user.email (깃허브 이메일)
 
 ### HTTP 클라이언트 라이브러리 - Axios, Fetch, Ajax
+
 1. Axios: 브라우저와 Node.js 환경 모두에서 HTTP 요청을 보내기 위한 JavaScript 라이브러리
    비동기적으로 데이터를 가져오고, 서버와 통신하며 RESTful API 다루기 용이
 
@@ -55,10 +66,12 @@ git config --global user.email (깃허브 이메일)
    jQuery 라이브러리를 포함해야 하므로, 현대 프로젝트에서는 권장되지 않음.
 
 ### Store(Pinia) 사용 방법
+
 src > stores > store.ts - pinia 설정(인스턴스 생성)
 src > stores > modules > common.ts
 
 진행중 에러
+
 1. Uncaught Error: [🍍]: "getActivePinia()" was called but there was no active Pinia. Are you trying to use a store
    before
    calling "app.use(pinia)"?
@@ -66,11 +79,13 @@ src > stores > modules > common.ts
    => 모듈 생성인자에 pinia 인스턴스 포함. commonStore(store)
 
 ### Axios 사용 방법
+
 npm install axios
 src > axios > axios.ts - axios 설정(인스턴스 생성, 인터셉터 추가)
 src > axios > restfulAPI.ts
 
 진행중 에러
+
 1. Vue: 'AxiosInstance' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
    'verbatimModuleSyntax'는 type-only imports 및 exports를 강제하는 설정.
    => import 요소 앞에 type 명시.
@@ -81,23 +96,30 @@ src > axios > restfulAPI.ts
    => AxiosRequestConfig 대신 InternalAxiosRequestConfig 타입 사용.
 
 ### export, export default 차이
+
 export: 이름이 지정된 개체를 내보냅니다. import { ... } from '모듈'; 형태로 가져옵니다.
 export default: 모듈에서 기본적으로 내보내는 단일 개체를 정의합니다. import 이름 from '모듈'; 형태로 가져옵니다.
 
 ### moment.js 설치
+
 npm install moment
 
 ### mitt(이벤트 통신 라이브러리) 추가
+
 npm install mitt
 src > mitt > mitt.ts 설정
 src > layouts > ChallengeLayout.vue onMounted 시 이벤트 등록
 
 ### API 호출 시 화면에 Loading 표시
+
 npm install --save vue-element-loading@next
 src > layouts > ChallengeLayout.vue 태그 추가 및 이벤트 등록
 
 진행중 에러
+
 1. Vue: Could not find a declaration file for module vue-element-loading.
-   => 해결 필요
+   => npm으로 설치한 모듈이 typescript에서 사용될 수 있도록 처리되지 않은 경우, typescript로 인식할 수 있도록 타입 정의
+   tsconfig.json 에 compilerOptions: { typeRoots: } 설정
+   => 참고: https://velog.io/@hyunjoong/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%AA%A8%EB%93%88-%EC%97%90-%EB%8C%80%ED%95%9C-%EC%84%A0%EC%96%B8-%ED%8C%8C%EC%9D%BC%EC%9D%84-%EC%B0%BE%EC%9D%84-%EC%88%98-%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4
 
 ### Composition API

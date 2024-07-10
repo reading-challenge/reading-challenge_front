@@ -3,8 +3,8 @@ import { onMounted, reactive } from 'vue'
 import { RouterView } from 'vue-router'
 import { serviceAPI } from '@/axios/serviceAPI'
 import router from '@/router/router'
-import {emitter, EventName, useMittEvent} from "@/mitt/mitt";
-import {utils} from "@/utils/utils";
+import { emitter, EventName, useMittEvent } from '@/mitt/mitt'
+import { utils } from '@/utils/utils'
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 import VueElementLoading from 'vue-element-loading'
@@ -12,7 +12,7 @@ import VueElementLoading from 'vue-element-loading'
 // loading
 const loadingOption = reactive({
   active: false,
-  spinner: 'ring',  //spinner: "bar-fade-scale", // spinner, mini-spinner, ring, line-wave, line-scale, line-down, bar-fade, bar-fade-scale
+  spinner: 'ring', //spinner: "bar-fade-scale", // spinner, mini-spinner, ring, line-wave, line-scale, line-down, bar-fade, bar-fade-scale
   color: '#0089DB',
   'background-color': 'rgba(255, 255, 255, 0.7)',
   size: '100',
@@ -25,15 +25,15 @@ const loadingOption = reactive({
 })
 
 onMounted(() => {
-  utils.log("##### ChallengeLayout onMounted #####")
+  utils.log('##### ChallengeLayout onMounted #####')
 
   // loading 이벤트 등록
   useMittEvent(emitter, EventName.LOADING, (val) => {
-    utils.log(val);
+    utils.log(val)
     if (val.text) {
       loadingOption.text = val.text
     } else {
-      loadingOption.text = "Loading...";
+      loadingOption.text = 'Loading...'
     }
 
     if (val.isVisible) {
@@ -63,10 +63,11 @@ onMounted(() => {
 
 <template>
   <el-container>
-    <VueElementLoading v-bind="loadingOption" color="rgb(255, 68, 0)" style="z-index: 10001"> </VueElementLoading>
+    <VueElementLoading v-bind="loadingOption" color="rgb(255, 68, 0)" style="z-index: 10001">
+    </VueElementLoading>
 
     <el-header
-        :style="{
+      :style="{
         backgroundColor:
           router.currentRoute.value.name !== 'myChallenge' &&
           router.currentRoute.value.name !== 'myInfo'

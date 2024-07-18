@@ -7,19 +7,20 @@ export const serviceAPI = {
     const res = await restfulAPI.reqGet<void>(url, params)
 
     return res.recvData
+  },
+
+  // User 관련 서비스
+  async reqSignUpPost(params: any) {
+    const url = `/signup`
+    const res = await restfulAPI.reqPost<APIResponse<string>>(url, params)
+
+    return res.recvData
   }
 
   // async reqMeListGet(params: any) {
   //   const url = `/ndcsequipment/facility/managedelementListAll`;
   //   const res = await restfulAPI.reqGet<Response<Array<Managedelement>>>(url, params);
-  //
-  //   return res.recvData;
-  // },
-  //
-  // async reqMeListPost(params: any) {
-  //   const url = `/ndcsequipment/facility/managedelementListAll2`;
-  //   const res = await restfulAPI.reqPost<Response<Array<Managedelement>>>(url, params);
-  //
+
   //   return res.recvData;
   // },
 }

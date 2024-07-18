@@ -7,47 +7,47 @@ const routes = [
       {
         path: '/home',
         name: 'home',
-        component: () => import('../views/HomeAbout.vue')
+        component: () => import('../views/main/HomeAbout.vue')
       },
       {
         path: '/login',
         name: 'login',
-        component: () => import('../views/LoginPage.vue')
+        component: () => import('../views/login/LoginPage.vue')
       },
       {
         path: '/join',
         name: 'join',
-        component: () => import('../views/JoinPage.vue')
+        component: () => import('../views/login/JoinPage.vue')
       },
       {
         path: '/mainchallenge',
         name: 'mainchallenge',
-        component: () => import('../views/MainChallenge.vue')
+        component: () => import('../views/challenge/MainChallenge.vue')
       },
       {
         path: '/createchallenge',
         name: 'createchallenge',
-        component: () => import('../views/CreateChallenge.vue')
+        component: () => import('../views/challenge/CreateChallenge.vue')
       },
       {
         path: '/detailchallenge',
         name: 'detailchallenge',
-        component: () => import('../views/DetailChallenge.vue')
+        component: () => import('../views/challenge/DetailChallenge.vue')
       },
       {
         path: '/myPage',
         name: 'myPage',
-        component: () => import('../views/MyPage.vue'),
+        component: () => import('../views/mypage/MyPage.vue'),
         children: [
           {
             path: '/myPage/myChallenge',
             name: 'myChallenge',
-            component: () => import('../components/MyChallenge.vue')
+            component: () => import('../views/mypage/MyChallenge.vue')
           },
           {
             path: '/myPage/myInfo',
             name: 'myInfo',
-            component: () => import('../components/MyInfo.vue')
+            component: () => import('../views/mypage/MyInfo.vue')
           }
         ]
       }

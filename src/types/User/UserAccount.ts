@@ -4,7 +4,7 @@ export interface User {
   email: string
   phone: string
   birthday: Date
-  favoriteSub: string
-  profileSrc: string
+  favoriteSub?: string
+  profileSrc?: string
   nickname: string
 }

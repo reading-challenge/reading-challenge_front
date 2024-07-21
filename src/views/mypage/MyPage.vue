@@ -7,7 +7,7 @@ let userid: String = '루챌'
 let email: String = 'example@naver.com'
 
 onMounted(() => {
-  router.push({ name: 'myChallenge' })
+  router.push({ name: 'mychallenge' })
 })
 </script>
 
@@ -21,8 +21,8 @@ onMounted(() => {
         <div class="div-12">{{ email }}</div>
         <img class="profile-underline" src="@/assets/image/profile_underline.png" alt="" />
 
-        <RouterLink class="mypage-menu" to="myChallenge">나의 챌린지</RouterLink>
-        <RouterLink class="mypage-menu" to="myInfo">나의 정보</RouterLink>
+        <RouterLink class="mypage-menu" to="mychallenge">나의 챌린지</RouterLink>
+        <RouterLink class="mypage-menu" to="myinfo">나의 정보</RouterLink>
       </div>
 
       <div class="div-15"></div>

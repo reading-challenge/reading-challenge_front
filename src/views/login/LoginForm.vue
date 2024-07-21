@@ -12,7 +12,7 @@
         <span class="div-18">|</span>
         <RouterLink class="login-menu" to="/login">비밀번호 찾기</RouterLink>
         <span class="div-18">|</span>
-        <RouterLink class="login-menu" to="/join">회원가입</RouterLink>
+        <RouterLink class="login-menu" to="/login/joinform">회원가입</RouterLink>
       </div>
     </div>
   </div>

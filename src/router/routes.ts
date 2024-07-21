@@ -12,12 +12,19 @@ const routes = [
       {
         path: '/login',
         name: 'login',
-        component: () => import('../views/login/LoginPage.vue')
-      },
-      {
-        path: '/join',
-        name: 'join',
-        component: () => import('../views/login/JoinPage.vue')
+        component: () => import('../views/login/LoginPage.vue'),
+        children: [
+          {
+            path: '/login/loginform',
+            name: 'loginform',
+            component: () => import('../views/login/LoginForm.vue')
+          },
+          {
+            path: '/login/joinform',
+            name: 'joinform',
+            component: () => import('../views/login/JoinForm.vue')
+          },
+        ]
       },
       {
         path: '/mainchallenge',
@@ -35,18 +42,18 @@ const routes = [
         component: () => import('../views/challenge/DetailChallenge.vue')
       },
       {
-        path: '/myPage',
-        name: 'myPage',
+        path: '/mypage',
+        name: 'mypage',
         component: () => import('../views/mypage/MyPage.vue'),
         children: [
           {
-            path: '/myPage/myChallenge',
-            name: 'myChallenge',
+            path: '/mypage/mychallenge',
+            name: 'mychallenge',
             component: () => import('../views/mypage/MyChallenge.vue')
           },
           {
-            path: '/myPage/myInfo',
-            name: 'myInfo',
+            path: '/mypage/myinfo',
+            name: 'myinfo',
             component: () => import('../views/mypage/MyInfo.vue')
           }
         ]

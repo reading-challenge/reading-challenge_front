@@ -69,8 +69,8 @@ onMounted(() => {
     <el-header
       :style="{
         backgroundColor:
-          router.currentRoute.value.name !== 'myChallenge' &&
-          router.currentRoute.value.name !== 'myInfo'
+          router.currentRoute.value.name !== 'mychallenge' &&
+          router.currentRoute.value.name !== 'myinfo'
             ? '#fff'
             : 'rgba(255, 153, 0, 0.07)'
       }"

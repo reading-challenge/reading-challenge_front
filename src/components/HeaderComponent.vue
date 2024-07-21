@@ -7,8 +7,8 @@ const userid: String = '루챌'
 <template>
   <div
     v-if="
-      router.currentRoute.value.name !== 'myChallenge' &&
-      router.currentRoute.value.name !== 'myInfo'
+      router.currentRoute.value.name !== 'mychallenge' &&
+      router.currentRoute.value.name !== 'myinfo'
     "
     class="header-wrapper"
   >
@@ -27,7 +27,7 @@ const userid: String = '루챌'
         <RouterLink class="header-menu" to="/login">LOGIN</RouterLink>
       </div>
       <div class="div-9">
-        <RouterLink class="header-menu" to="/myPage">MY PAGE</RouterLink>
+        <RouterLink class="header-menu" to="/mypage">MY PAGE</RouterLink>
       </div>
     </div>
   </div>

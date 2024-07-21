@@ -3,7 +3,7 @@ import router from '@/router/router'
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  router.push({ name: 'myChallenge' })
+  router.push({ name: 'loginform' })
 })
 </script>
 
